@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <div class="row" *fcidVisible="'admin'">
+    <div class="col-md-12" style="padding:0.5em 2em;">
+      <h1>Client {{clientId}}: {{clientName}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" fcidContextMenuBinding [clientId]="clientId" *fcidVisible="'admin'">
+      <fcid-menu></fcid-menu>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style="padding:0.5em 2em;">
+      <h1>Site {{siteId}}: {{siteName}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" fcidSubcontextMenuBinding [clientId]="clientId" [itemId]="siteId" [itemName]="'Site'">
+      <fcid-menu></fcid-menu>
+    </div>
+  </div>
+</div>
+<form class="popup-formatting" [formGroup]="siteEditForm" fcidMetadataBinding [domain]="'supplychain.site'" [context]="'site.edit'"
+      [serviceUrl]="serviceURL" [apiVersion]="'api/v1/'" [isTest]='false'>
+  <fcid-page-help-control fcidPageHelpBinding></fcid-page-help-control>
+
+  <div class="row col-md-12">
+    <div class="col-md-6">
+      <!-- siteName field using an example of how to override the lable name for the field through input property -->
+      <fcid-form-control [field]="'siteName'" [formGroupValue]="siteEditForm" [labelName]="'SITE NAME'"></fcid-form-control>
+
+      <!-- phone field example of how to ovreride the lable by using the lable template through template-->
+      <fcid-form-control [field]="'phone'" [formGroupValue]="siteEditForm" [labelTemplate]="phoneTemplate">
+        <ng-template #phoneTemplate>
+          <h6>PHONE using H6 Element </h6>
+        </ng-template>
+      </fcid-form-control>
+
+      <!-- addess1 is an example of how to override the help text for the field through input property -->
+      <fcid-form-control [field]="'address1'" [formGroupValue]="siteEditForm" [helpText]="'Please Enter your Address'"></fcid-form-control>
+
+      <fcid-form-control [field]="'address2'" [formGroupValue]="siteEditForm"></fcid-form-control>
+
+      <fcid-form-control [field]="'city'" [formGroupValue]="siteEditForm"></fcid-form-control>
+
+      <fcid-form-control [field]="'state'" [formGroupValue]="siteEditForm"></fcid-form-control>
+
+      <!-- country field is an example of how to override the field template -control template - for the field  -->
+      <fcid-form-control [field]="'country'" [formGroupValue]="siteEditForm" [controlTemplate]="countyTemplate">
+        <ng-template #countyTemplate>
+          <div>
+            <kendo-dropdownlist name="country" [data]="countries" [textField]="'text'" [valueField]="'value'"
+                                [valuePrimitive]="true" formControlName="country" style="width:100%">
+            </kendo-dropdownlist>
+          </div>
+        </ng-template>
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'postalCode'" [formGroupValue]="siteEditForm"></fcid-form-control>
+
+    </div>
+
+    <div class="col-md-6">
+      <fcid-form-control [field]="'locationTypeSet'" [formGroupValue]="siteEditForm">
+      </fcid-form-control>
+
+      <!-- listing locationTypeSet again to show how you can override the field template by using controlOverride input property
+      Note: for this one the items will not show in the DDL because its still not configured for this -->
+      <fcid-form-control [field]="'locationTypeSet'" [formGroupValue]="siteEditForm" [controlOverride]="'fcid-form-dropdown-control'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'textArea'"  [formGroupValue]="siteEditForm"></fcid-form-control>
+    </div>
+  </div>
+  <div class="row col-md-12 controlSpacing">
+    <div class="col-md-6">
+      <div class="col-md-8 offset-md-2">
+        <button kendoButton id="save" type="button" class="saveButton" [disabled]="!siteEditForm.valid || !hasChanged"
+                (click)="onSave()">
+          <fcid-form-label-control fcidFormLabelBinding *ngIf="savingText == 'Save'" [field]="'save'" [onlyText]="true"></fcid-form-label-control>
+          <fcid-form-label-control fcidFormLabelBinding *ngIf="savingText == 'Saving...'" [field]="'saving...'"
+                                   [onlyText]="true"></fcid-form-label-control>
+          <fcid-form-label-control fcidFormLabelBinding *ngIf="savingText == 'Saved'" [field]="'saved'" [onlyText]="true"></fcid-form-label-control>
+        </button>
+        <button kendoButton id="undo" type="button" class="undoButton" [disabled]="!hasChanged" (click)="onUndo()">
+          <fcid-form-label-control fcidFormLabelBinding [field]="'undoChanges'" [onlyText]="true"></fcid-form-label-control>
+        </button>
+        <button kendoButton id="delete" type="button" class="deleteButton" (click)="onDelete()">
+          <fcid-form-label-control fcidFormLabelBinding [field]="'delete'" [onlyText]="true"></fcid-form-label-control>
+        </button>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </div>
+</form>

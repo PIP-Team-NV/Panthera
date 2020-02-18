@@ -1,0 +1,12 @@
+<div [formGroup]="formGroupValue">
+  <kendo-multiselect #list [data]="listCoreItems" [textField]="'coreItemValue'" [valueField]="'coreItemId'"
+    [value]="value" [autoClose]="false" [filterable]="true" formControlName="{{field}}"
+    (valueChange)="handleValue($event)" (filterChange)="handleFilterEvent($event)" [style.width]="width"
+    [readonly]="readonly" [required]="required">
+    <ng-template kendoMultiSelectItemTemplate let-dataItem>
+      <input type="checkbox" class="k-checkbox" [checked]="isItemSelected(dataItem.coreItemValue)">
+      <label class="k-checkbox-label">{{ dataItem.coreItemValue }}</label>
+    </ng-template>
+  </kendo-multiselect>
+  &nbsp;<span *ngIf="required" class="red">*</span>
+</div>

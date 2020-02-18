@@ -1,0 +1,144 @@
+<div class="container-fluid">
+  <div class="row" *fcidVisible="'admin'">
+    <div class="col-md-12" style="padding:0.5em 2em;">
+      <h1>Client {{clientId}}: {{clientName}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" fcidContextMenuBinding [clientId]="clientId" *fcidVisible="'admin'">
+      <fcid-menu></fcid-menu>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" style="padding:0.5em 2em;">
+      <h1>Site {{siteId}}: {{siteName}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" fcidSubcontextMenuBinding [clientId]="clientId" [itemId]="siteId" [itemName]="'Site'">
+      <fcid-menu></fcid-menu>
+    </div>
+  </div>
+</div>
+<form class="popup-formatting" [formGroup]="siteEditForm" fcidMetadataBinding [domain]="'supplychain.site'" [context]="'site.edit'"
+  [serviceUrl]="serviceURL" [apiVersion]="'api/v1/'" [isTest]='false'>
+  <fcid-page-help-control fcidPageHelpBinding></fcid-page-help-control>
+  <a [routerLink]="['/accounts/', clientId, 'sites', 'edit2', siteId]">Click Here! Site Edit with New Field Template Pattern</a>
+
+  <div class="row col-md-12">
+    <div class="col-md-6">
+      <div class="row col-md-12 controlSpacing">
+        <div class="col-md-3 no-padding">
+          <fcid-form-label-control fcidFormLabelBinding [field]="'siteName'" [for]="'siteName'"></fcid-form-label-control>
+        </div>
+        <input kendoTextBox class="col-md-7" id="siteName" type="text" formControlName="siteName" >
+        <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+      </div>
+      <div class="row col-md-12 controlSpacing">
+        <div class="col-md-3 no-padding">
+          <!-- <label class="col-md-10 popup-label" for="phone">Site Phone</label>
+        <i class="col-md-2 fa fa-question-circle fcid-link-color-green fieldHelp"></i> -->
+          <fcid-form-label-control fcidFormLabelBinding [field]="'phone'" [for]="'phone'"></fcid-form-label-control>
+        </div>
+        <input kendoTextBox class="col-md-7" id="phone" type="text" formControlName="phone">
+        <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+      </div>
+      <div class="row col-md-12 controlSpacing">
+        <div class="col-md-3 no-padding">
+          <!-- <label class="col-md-10 popup-label" for="address1">Street 1</label>
+        <i class="col-md-2 fa fa-question-circle fcid-link-color-green fieldHelp"></i> -->
+          <fcid-form-label-control fcidFormLabelBinding [field]="'address1'" [for]="'address1'"></fcid-form-label-control>
+        </div>
+        <input kendoTextBox class="col-md-7" id="address1" type="text" formControlName="address1">
+        <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+      </div>
+      <div class="row col-md-12 controlSpacing">
+        <div class="col-md-3 no-padding">
+          <!-- <label class="col-md-10 popup-label" for="address2">Street 2</label>
+          <i class="col-md-2 fa fa-question-circle fcid-link-color-green fieldHelp"></i> -->
+          <fcid-form-label-control fcidFormLabelBinding [field]="'address2'" [for]="'address2'"></fcid-form-label-control>
+        </div>
+        <input kendoTextBox class="col-md-7" id="address2" type="text" formControlName="address2">
+        <div class="col-md-1"></div>
+      </div>
+      <div class="row col-md-12 controlSpacing">
+        <div class="col-md-3 no-padding">
+          <!-- <label class="col-md-10 popup-label" for="city">City</label>
+          <i class="col-md-2 fa fa-question-circle fcid-link-color-green fieldHelp"></i> -->
+          <fcid-form-label-control fcidFormLabelBinding [field]="'city'" [for]="'city'"></fcid-form-label-control>
+        </div>
+        <input kendoTextBox class="col-md-7" id="city" type="text" formControlName="city">
+        <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+      </div>
+      <div class="row col-md-12 controlSpacing">
+        <div class="col-md-3 no-padding">
+          <!-- <label class="col-md-10 popup-label" for="state">County/State/Province</label>
+          <i class="col-md-2 fa fa-question-circle fcid-link-color-green fieldHelp"></i> -->
+          <fcid-form-label-control fcidFormLabelBinding [field]="'state'" [for]="'state'"></fcid-form-label-control>
+        </div>
+        <input kendoTextBox class="col-md-7" id="state" type="text" formControlName="state">
+        <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+      </div>
+      <div class="row col-md-12 controlSpacing">
+        <div class="col-md-3 no-padding">
+          <!-- <label class="col-md-10 popup-label" for="country">Country</label>
+          <i class="col-md-2 fa fa-question-circle fcid-link-color-green fieldHelp"></i> -->
+          <fcid-form-label-control fcidFormLabelBinding [field]="'country'" [for]="'country'"></fcid-form-label-control>
+        </div>
+        <kendo-dropdownlist class="col-md-7 no-padding" name="country" [data]="countries" [textField]="'text'"
+          [valueField]="'value'" [valuePrimitive]="true" formControlName="country">
+        </kendo-dropdownlist>
+        <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+      </div>
+    
+      <div class="row col-md-12 controlSpacing">
+        <div class="col-md-3 no-padding"> 
+          <!-- <label class="col-md-10 popup-label" for="postalCode">Postal Code / Zip Code</label>
+          <i class="col-md-2 fa fa-question-circle fcid-link-color-green fieldHelp"></i> -->
+         <fcid-form-label-control fcidFormLabelBinding [field]="'postalCode'" [for]="'postalCode'"></fcid-form-label-control>
+        </div>
+        <input kendoTextBox class="col-md-7" id="postalCode" type="text" formControlName="postalCode">
+        <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- Second Column-->
+      <div class="row col-md-12 controlSpacing">
+        <div class="col-md-3 no-padding"> 
+      <!-- < <label class="popup-label col-md-10" for="locationTypeSet">Site Type</label>
+          <i class="col-md-2 fa fa-question-circle fcid-link-color-green fieldHelp"></i>  -->
+       <fcid-form-label-control  fcidFormLabelBinding  [field]="'locationTypeSet'" [for]="'locationTypeSet'" ></fcid-form-label-control>
+        </div>
+        <div class="k-form-field col-md-7 no-padding">
+         <fcid-form-multiselect-control fcidFormMultiselectBinding [field]="'locationTypeSet'" formControlName="locationTypeSet"></fcid-form-multiselect-control>
+        </div>
+        <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="row col-md-12 controlSpacing">
+    <div class="col-md-6">
+      <div class="col-md-8 offset-md-2">
+        <button kendoButton id="save" type="button" class="saveButton" [disabled]="!siteEditForm.valid || !hasChanged"
+          (click)="onSave()">
+          <fcid-form-label-control fcidFormLabelBinding *ngIf="savingText == 'Save'" [field]="'save'" [onlyText]="true"></fcid-form-label-control>
+          <fcid-form-label-control fcidFormLabelBinding *ngIf="savingText == 'Saving...'" [field]="'saving...'"
+            [onlyText]="true"></fcid-form-label-control>
+          <fcid-form-label-control fcidFormLabelBinding *ngIf="savingText == 'Saved'" [field]="'saved'" [onlyText]="true"></fcid-form-label-control>
+        </button>
+        <button kendoButton id="undo" type="button" class="undoButton" [disabled]="!hasChanged" (click)="onUndo()">
+          <fcid-form-label-control fcidFormLabelBinding [field]="'undoChanges'" [onlyText]="true"></fcid-form-label-control>
+        </button>
+        <button kendoButton id="delete" type="button" class="deleteButton" (click)="onDelete()">
+          <fcid-form-label-control fcidFormLabelBinding [field]="'delete'" [onlyText]="true"></fcid-form-label-control>
+        </button>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </div>
+</form>
+

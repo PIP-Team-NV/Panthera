@@ -1,0 +1,6 @@
+<div [formGroup]="formGroupValue">
+  <kendo-dropdownlist [data]="listCoreItems" [textField]="'coreItemValue'" [valueField]="'coreItemId'"
+                      [style.width]="width" [readonly]="isReadonly" formControlName="{{field}}" [valuePrimitive]="true" [defaultItem]="defaultListCoreItems">
+  </kendo-dropdownlist>
+  &nbsp;<span *ngIf="isRequiredEnabled" class="red">*</span>
+</div>

@@ -1,0 +1,49 @@
+<div [formGroup]=formGroupValue>
+  <ng-template #template let-anchor>
+    <img class='tooltipImg' src={{imgSrc}} />
+  </ng-template>
+  <div class="row" *ngFor="let file of gridData;">
+    <div class="col-md-3" kendoTooltip>
+      <span title={{file.Name}}{{file.Description}}{{file.Date}}>{{file.Name}}</span>
+    </div>
+    <div class="col-md-3" kendoTooltip [tooltipTemplate]="template" filter="span">
+      <span>{{thumbnail}}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-11">
+      <kendo-upload [saveUrl]="uploadSaveUrl" [restrictions]="restriction" [removeUrl]="uploadRemoveUrl"
+                    [multiple]="false" formControlName="{{field}}">
+      </kendo-upload>
+    </div>
+    <div class="col-md-1">
+      &nbsp;<span *ngIf="required" class="red">*</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <br />
+      <button *ngIf="showHistoryBtn" kendoButton (click)="openShowHistory()">
+        {{historyBtnText}}
+      </button>
+      </div>
+  </div>
+
+
+      <div *ngIf="showGrid">
+        <div class="row">
+          <div class="col-md-11">
+            <kendo-grid [data]="gridData" [height]="height">
+              <kendo-grid-column field="Name" title="{{fileHeaderText}}" [editable]="false">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                  <a href="">{{dataItem.Name}}</a>
+                </ng-template>
+              </kendo-grid-column>
+              <kendo-grid-column field="Description" title="{{descriptionHeaderText}}"></kendo-grid-column>
+              <kendo-grid-column field="Date" title="{{dateHeaderText}}"></kendo-grid-column>
+            </kendo-grid>
+          </div>
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+    </div>

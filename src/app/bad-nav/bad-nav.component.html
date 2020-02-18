@@ -1,0 +1,24 @@
+<div class="container-fluid" *ngIf="isEnabled">
+  <div class="row">
+    <div class="col-md-9"></div>
+    <div class="col-md-2 fcid-color-green">User: {{givenName}} </div>
+    <div class="col-md-1">
+      <button kendoButton class="btn-sm" (click)="logout()">
+        Logout
+      </button>
+    </div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-11">
+      <nav>
+        <div fcidMainmenuBinding *fcidVisible="'admin'">
+          <fcid-menu></fcid-menu>
+        </div>
+        <div fcidContextMenuBinding [clientId]="clientId" *fcidVisible="'basicClient'">
+          <fcid-menu></fcid-menu>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+<hr />

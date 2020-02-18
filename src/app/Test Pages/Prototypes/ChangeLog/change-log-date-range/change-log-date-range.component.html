@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row col-md-12">
+    <div class="col-md-11">    
+    </div>
+    <div class="col-md-1">
+        <button class="btn-sm" kendoButton id="changelog" type="button" (click)="onChangeLogClick()">Change Log</button>
+    </div>  
+  </div>
+  <div class="row col-md-12 dateRangePicker" *ngIf="showDateRange">
+    <kendo-daterange>
+      <label>
+          <span class="label">Start</span>
+          <kendo-dateinput kendoDateRangeStartInput [(value)]="start"></kendo-dateinput>
+      </label>
+      <label>
+          <span class="label">End</span>
+          <kendo-dateinput kendoDateRangeEndInput [(value)]="end"></kendo-dateinput>
+      </label>
+      <kendo-daterange-popup 
+        [anchorAlign]="{ horizontal: 'left', vertical: 'bottom' }"
+        [popupAlign]="{ horizontal: 'left', vertical: 'bottom' }">
+      </kendo-daterange-popup>
+    </kendo-daterange>
+    <div class="col-md-1"><button kendoButton id="btnShowAll" type="button" (click)="onShowAllClick()">Show All</button></div>
+    <div class="col-md-1"><button kendoButton id="btnClear" type="button" (click)="onClearClick()">Clear</button></div>
+    <div class="col-md-1"><button kendoButton id="btnClose" type="button" (click)="onCloseClick()">Close</button></div>
+  </div>
+</div>

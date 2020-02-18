@@ -1,0 +1,16 @@
+<form [formGroup]="clientInsertForm" class="popup-formatting">
+
+  <div class="row col-md-12">
+    <label class="col-md-4 popup-label" [for]="name"> Trading Name:</label>
+    <div class="col-md-1"></div>
+    <input kendoTextBox type="text" class="col-md-6" formControlName="name" #name>
+    <div class="col-md-1"></div>
+  </div>
+  <div class="row">
+    <button kendoButton id="saveAndCon" type="button" [disabled]="!clientInsertForm.valid" (click)="onSave('saveAndCon')">Save
+      and continue</button>
+    <button kendoButton id="saveAndAdd" type="button" [disabled]="!clientInsertForm.valid" (click)="onSave('saveAndAdd')">Save
+      and Add Another</button>
+    <button kendoButton id="cancel" type="button" (click)="onClose()" kendoWindowCloseeAction>Cancel</button>
+  </div>
+</form>

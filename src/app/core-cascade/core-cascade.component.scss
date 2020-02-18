@@ -1,0 +1,121 @@
+kendo-tabstrip p {
+  margin: 0;
+  padding: 8px;
+}
+
+.load-more {
+  margin-top: -16px;
+  width: 100%;
+  padding: 3px 0;
+  background: #eee;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  border-top: 0;
+  color: #333;
+}
+
+.listview_wrapper ul {
+  list-style: none;
+  padding: 0;
+  max-height: 190px;
+  min-height: 100px;
+  overflow: auto;
+}
+
+ul.k-widget {
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -o-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -ms-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+}
+
+.boldstats {
+  font-weight: bold
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+
+  div {
+    display: inline-block;
+  }
+}
+
+.quetesSelect {
+  max-height: 200px;
+  overflow: scroll;
+  padding-bottom: 20px;
+}
+
+.submitBrowse {
+  margin-top: 15px;
+}
+
+.inputWidth {
+  width: 150px;
+  border: 0px;
+}
+
+.inputOfSearch {
+  width: 100%;
+}
+
+
+.parent-content {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: auto;
+  margin: 200px auto;
+  border: 1px solid red;
+}
+.content {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: auto;
+  margin: 300px;
+  border: none;
+}
+.anchor {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+.popupStyle{
+  width: 600px;
+  height: 500px;
+  margin: 0px;
+}
+
+.popdiv{
+  width: 620px;
+  height: 520px;
+  background-color: lightgray;
+}
+
+.headerDiv{
+  background-color: lightgray;
+  margin-top: -8px;
+}
+
+.labelText {
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+.btnClose{
+  float: right;
+  height: 25px;
+  width: 25px;
+  padding-top: 8px;
+  padding-right: 8px;
+}
+
+.k-header-tab {
+  padding: 10px !important;
+}

@@ -1,0 +1,5 @@
+<div [formGroup]="formGroupValue">
+  <input kendoTextBox [maxlength]="maxLength" [readonly]=readOnly [style.width]="width"
+    (input)="onSearchChange($event.target.value)" formControlName="{{field}}" (paste)="onPaste($event)" />
+  &nbsp;<span *ngIf="required" class="red">*</span>
+</div>

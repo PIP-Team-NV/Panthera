@@ -1,0 +1,83 @@
+$accent: #5cb4c9;
+$secondary: #3d777e;
+$info: #17a2b8;
+$success: #28a745;
+$warning: #ffc107;
+$error: #dc3545;
+$body-bg: #ffffff;
+$body-color: #4d6390;
+// $component-bg: #ffffff;
+// $component-color: #4d6390;
+// $card-cap-bg: #3d777e;
+// $card-cap-color: #ffffff;
+$series-a: #0275d8;
+$series-b: #5bc0de;
+$series-c: #5cb85c;
+$series-d: #f0ad4e;
+$series-e: #e67d4a;
+$series-f: #d9534f;
+$border-radius: 5px; //$border-radius
+//$base-bg:       //try-darken( $component-bg, 3% )
+//$base-text:       //$component-color
+//$base-border:       //try-darken( $base-bg, 3% )
+//$base-gradient:       //FALSE
+$hovered-bg:$accent; //try-darken( $base-bg, 3% )
+//$hovered-text:       //$base-text
+//$hovered-border:       //try-darken( $base-border, 12% )
+//$hovered-gradient:       //FALSE
+$selected-bg:$accent;
+//$selected-text:       //contrast-wcag( $selected-bg )
+//$selected-border:       //try-darken( $selected-bg, 12% )
+//$selected-gradient:       //FALSE
+//Buttons:       //
+$button-bg:$secondary; //$secondary
+$button-text: $body-bg; //contrast-wcag( $button-bg, $gray-900 )
+//$button-border:       //$button-bg
+//$button-gradient:       //FALSE
+$button-hovered-bg: $accent; //try-darken( $button-bg, 7.5% )
+$button-hovered-text:$body-bg; //contrast-wcag( $button-hovered-bg, $gray-900 )
+//$button-hovered-border:       //try-darken( $button-border, 10% )
+//$button-hovered-gradient:       //FALSE
+$button-pressed-bg: $accent; //try-darken( $button-bg, 10% )
+$button-pressed-text: $body-bg; //contrast-wcag( $button-pressed-bg, $gray-900 )
+//$button-pressed-border:       //try-darken( $button-border, 12.5% )
+//$button-pressed-gradient:       //FALSE
+//$button-focused-shadow:       //0 0 0 3px rgba($button-border, .5)
+//Charts:       //
+//Name:       //Default value
+//$series-a:       // #0275d8
+//$series-b:       // #5bc0de
+//$series-c:       // #5cb85c
+//$series-d:       // #f0ad4e
+//$series-e:       // #e67d4a
+//$series-f:       // #d9534f
+//$chart-major-lines:       //rgba(0, 0, 0, .08)
+//$chart-minor-lines:       //rgba(0, 0, 0, .04)
+//Color System:       //
+//Name:       //Default value
+//$accent:       //$primary
+//:       //
+//$accent-contrast:       //contrast-wcag( $accent )
+//:       //
+//$success:       //$success
+//$info:       //$info
+//$warning:       //$warning
+//$error:       //$danger
+//$color-level-step:       //$theme-color-interval
+//$yiq-threshold:       //$yiq-contrasted-threshold
+//$yiq-dark:       //$yiq-text-dark
+//$yiq-light:       //$yiq-text-light
+//Fonts:       //
+//Name:       //Default value
+//$font-size:       //$font-size-base
+//$font-family:       //$font-family-base
+//$font-family-monospace:       //$font-family-monospace
+//$line-height:       //$line-height-base
+//Toolbar:       //
+//Name:       //Default value
+//$toolbar-padding-x:       //$table-cell-padding / 2
+//$toolbar-padding-y:       //$table-cell-padding / 2
+// $grid-header-bg:$secondary;
+// $grid-header-text:#ffffff;
+// $grid-bg:$accent;
+// $grid-text:$grid-header-text;

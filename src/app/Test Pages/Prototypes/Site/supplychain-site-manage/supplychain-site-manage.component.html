@@ -1,0 +1,85 @@
+<kendo-grid id="sitesGrid" fcidMetadataBinding appSitesBinding [domain]="'supplychain.site'" [context]="'site.manage'"
+  [serviceUrl]="serviceURL" [apiVersion]="'api/v1/'" [isTest]='false' [sortable]="{
+    mode: 'multiple'
+    }"
+  [pageSize]="10" [skip]="0" [pageable]="true" [filterable]="true" [filter]="filter">
+
+  <kendo-grid-column field="siteId" fcidColumnBinding filter='numeric'>
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'siteId'"></fcid-column-header-control>
+    </ng-template>
+    <ng-template kendoGridFilterCellTemplate let-filter let-column="column">
+      <kendo-grid-numeric-filter-cell [column]="column" [spinners]="false" decimals="0" [format]="'##'" [showOperators]="false"
+        [filter]="filter">
+      </kendo-grid-numeric-filter-cell>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <a [routerLink]="['/accounts/', dataItem.clientId, 'sites', 'edit', dataItem.siteId]">{{dataItem.siteId}}</a>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="siteName" fcidColumnBinding filter="text">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'siteName'"></fcid-column-header-control>
+    </ng-template>
+  </kendo-grid-column>
+  <!-- <kendo-grid-column field="siteType" fcidColumnBinding filter="text">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control  fcidColumnHeaderBinding [field]="'siteType'"></fcid-column-header-control>
+    </ng-template>
+  </kendo-grid-column> -->
+  <kendo-grid-column field="locationTypeSet">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'locationTypeSet'"></fcid-column-header-control>
+    </ng-template>
+    <ng-template kendoGridFilterCellTemplate let-column="column" let-filter="filter" let-filterService="filterService">
+      <!-- <ng-template kendoGridFilterMenuTemplate let-filter let-filterService let-column> -->
+      <fcid-multiselect-filter-control [field]="'locationTypeSet'"></fcid-multiselect-filter-control>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <fcid-multi-value-cell [value]="dataItem['locationTypeSet']" [field]="'locationTypeSet'"></fcid-multi-value-cell>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="city" fcidColumnBinding filter="text">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'city'"></fcid-column-header-control>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="state" fcidColumnBinding filter="text">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'state'"></fcid-column-header-control>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="country" fcidColumnBinding filter="text">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'country'"></fcid-column-header-control>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="clientId" fcidColumnBinding filter='numeric'>
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'clientId'"></fcid-column-header-control>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <a [routerLink]="['/accounts/edit', dataItem.clientId]">{{dataItem.clientId}}</a>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="clientName" fcidColumnBinding filter="text">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'clientName'"></fcid-column-header-control>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="bTest" fcidColumnBinding filter="boolean">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'testClient'"></fcid-column-header-control>
+    </ng-template>
+    <ng-template kendoGridFilterCellTemplate let-filter>
+      <fcid-checkbox-filter-control [field]="'bTest'" [filter]="filter"></fcid-checkbox-filter-control>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <fcid-icon-field-control fcidIconFieldBinding [field]="'bTest'" [value]="dataItem.bTest"></fcid-icon-field-control>
+    </ng-template>
+  </kendo-grid-column>
+
+
+</kendo-grid>
+
+<div kendoWindowContainer></div>

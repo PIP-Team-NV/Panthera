@@ -1,0 +1,31 @@
+[{
+    "Id": "ALFKI",
+    "EmployeeName": "Alfreds Futterkiste",
+    "BirthDate": "Maria Anders",
+    "City": "Berlin"
+}, {
+    "Id": "ANATR",
+    "EmployeeName": "Ana Trujillo Emparedados y helados",
+    "BirthDate": "Ana Trujillo",
+    "City": "México D.F."
+}, {
+    "Id": "ANTON",
+    "EmployeeName": "Antonio Moreno Taquería",
+    "BirthDate": "Antonio Moreno",
+    "City": "México D.F."
+}, {
+    "Id": "AROUT",
+    "EmployeeName": "Around the Horn",
+    "BirthDate": "Thomas Hardy",
+    "City": "London"
+}, {
+    "Id": "BERGS",
+    "EmployeeName": "Berglunds snabbköp",
+    "BirthDate": "Christina Berglund",
+    "City": "Luleå"
+}, {
+    "Id": "BLAUS",
+    "EmployeeName": "Blauer See Delikatessen",
+    "BirthDate": "Hanna Moos",
+    "City": "Mannheim"
+}]

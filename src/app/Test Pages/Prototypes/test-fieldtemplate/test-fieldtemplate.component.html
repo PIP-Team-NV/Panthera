@@ -1,0 +1,107 @@
+<div class="container-fluid">
+  <div class="row" *fcidVisible="'admin'">
+    <div class="col-md-12" style="padding:0.5em 2em;">
+      <!-- <h1>Client {{clientId}}: {{clientName}}</h1> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" fcidContextMenuBinding [clientId]="clientId" *fcidVisible="'admin'">
+      <!-- <fcid-menu></fcid-menu> -->
+    </div>
+  </div>
+</div>
+<div kendoWindowContainer></div>
+<!-- fcidMetadataBinding -->
+<form [formGroup]="clientEditForm" class="form-formatting" fcidMockMetaDataBinding fcidChangeLogTipBinding
+  [clientId]="filteredClientId" [domain]="'client.account'" [context]="'account.edit'" [serviceUrl]="serviceURL"
+  [apiVersion]="'api/v1/'" [isTest]='true' formGroupProvider [formGroupValue]="clientEditForm">
+
+
+  <!-- <fcid-form-control [field]="'password'" [fieldData]="'passwordRetype'">
+  </fcid-form-control> -->
+
+  <fcid-form-control [field]="'firstName'">
+  </fcid-form-control>
+
+  <!-- <fcid-form-control [field]="'FirstName'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Age'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Salary'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Hyperlink'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'URL'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'MultiSelect'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'TextArea'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'TextEditor'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'SingleFileUpload'" [gridDisplayData]="singleProducts">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'MultipleFileUpload'" [gridDisplayData]="multipleProducts"
+    [gridHistoryData]="multipleProducts">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Cascade'" [fieldData]="'subcategory'" [fieldvalue]="'description'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'CoreCascade'" [fieldData]="'Ingr'" [fieldDataValue]="fieldDataValue"
+    [itemsSearch]="itemsSearch">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'TextCombo'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'DropDown'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'CoreImg'" [imgdata]="imgObj">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Boolean'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'DateTime'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'reminder'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Checkbox'">
+  </fcid-form-control> -->
+
+
+  <div class="row col-md-12 controlSpacing">
+    <div class="col-md-6">
+      <div class="col-md-7 offset-md-3">
+        <!-- <button kendoButton id="update" type="button" class="saveButton"
+          [disabled]="!clientEditForm.valid || !hasChanged" (click)="onUpdate()">
+          {{savingText}}
+        </button>
+        <button kendoButton id="cancel" type="button" class="undoButton" (click)="onCancel()" [disabled]="!hasChanged">
+          Undo
+          Changes
+        </button> -->
+      </div>
+    </div>
+  </div>
+</form>
+<!-- <hr/> -->
+<div class="row col-md-12">
+  <!-- <div class="col-md-10 offset-md-1"> -->
+  <!-- <fcid-supplychain-site-show [showHeader]="false" [gridDomain]="'client.account'" [Show]="false">
+  </fcid-supplychain-site-show> -->
+  <!-- </div> -->
+</div>

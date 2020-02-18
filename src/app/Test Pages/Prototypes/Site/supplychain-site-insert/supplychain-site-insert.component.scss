@@ -1,0 +1,52 @@
+.popup-formatting {
+     width: 90%;
+     margin-left: 37px;
+}
+.popup-label {
+    text-align: right;
+    margin-top: 6px;
+
+}
+.popup-input {
+    margin-left: 30px;
+    width: 300px;
+}
+
+.popup-formatting .row{
+    margin-bottom: 5px;
+}
+.popup-formatting .row button {
+    margin-top: 10px;
+}
+.popup-formatting .row button:not(:first-child) {
+    margin-left:5px;
+}
+
+.k-checkbox-label {
+    margin-right: 10px;
+}
+
+.no-padding{
+    padding:0 !important;
+}
+
+
+.required {
+    text-align: right;
+}
+
+.required span {
+    color: red;
+    font-size: x-large;
+    margin: 0 0 0 33px;
+}
+
+.required-end {
+    text-align: left;
+}
+
+.required-end span {
+    color: red;
+    font-size: x-large;
+    margin: 0 0 0 -13px;
+}

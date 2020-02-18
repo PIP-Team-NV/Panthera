@@ -1,0 +1,110 @@
+<div class="container-fluid">
+   <div class="row">
+      <div class="col-3 py-2 sidemenu">
+         <div class="py-1">
+            <kendo-autocomplete class="searchbar" [data]="data" [placeholder]="'e.g. Status'" [valueField]="'itemName'"
+               [filterable]="true" (valueChange)="valueChange($event)" (filterChange)="filterChange($event)">
+            </kendo-autocomplete>
+         </div>
+         <div class="card">
+            <ul class="list-group list-group-flush fieldControlList">
+               <li *ngFor="let fieldControl of fieldControls"
+                  [class.selected]="fieldControl.itemName === selectedFieldControl.itemName"
+                  (click)="selectFieldControl(fieldControl)" class="list-group-item">{{fieldControl.itemName}}</li>
+            </ul>
+         </div>
+      </div>
+      <div class="col-9 py-1">
+         <div class="row py-2 border-bottom">
+            <div class="col-sm">
+               <p>Connection Type</p>
+               <kendo-dropdownlist [data]="connectionTypes" (valueChange)="onChangeConnectionType($event)"
+               [textField]="'value'" [valueField]="'id'">
+               </kendo-dropdownlist>
+            </div>
+            <div class="col-sm">
+               <p>Domain</p>
+               <kendo-dropdownlist [data]="domains" (valueChange)="onChangeDomain($event)" [textField]="'value'"
+                  [valueField]="'id'">
+               </kendo-dropdownlist>
+            </div>
+            <div class="col-sm">
+               <p>Context</p>
+               <kendo-dropdownlist [data]="contexts" (valueChange)="onChangeContext($event)" [textField]="'value'"
+                  [valueField]="'id'">
+               </kendo-dropdownlist>
+            </div>
+            <div class="col-sm">
+               <p>Language</p>
+               <kendo-dropdownlist [data]="languages" (valueChange)="onChangeLanguage($event)" [textField]="'value'"
+                  [valueField]="'id'">
+               </kendo-dropdownlist>
+            </div>
+         </div>
+         <div class="row py-2 pt-4" *ngIf="isEnabled == true">
+            <div class="col-sm-6">
+               <h6 class="text-center title p-1 " style="background: #f7f7f7;">{{selectedFieldControl.itemName}}</h6>
+            </div>
+            <div class="col-sm-6">
+               <button kendoButton class="btn btn-info" (click)="onTestMetadataBtnClick()">TEST METADATA</button>
+               <button kendoButton class="btn btn-info" (click)="onTestJasonBtnClick()">TEST JSON</button>
+               <button kendoButton class="btn btn-info" (click)="onResetFromDBBtnClick()">RESET from DATABASE</button>
+            </div>
+         </div>
+         <div class="row py-1">
+            <div class="col-md-12 mb-3">
+               <div class="card">
+                  <p class="card-header">CONTROL</p>
+                  <div class="card-body">
+                     <div *ngIf="isEnabled == true">
+                        <form [formGroup]="testForm" class="form-formatting">
+                           <!-- {{selectedFieldControl.itemName}} -->
+                           <fcid-form-control [field]="selectedFieldControl.itemName" [formGroupValue]="testForm"
+                              [metaData]="metaData"> </fcid-form-control>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-12 mb-3">
+               <div class="card">
+                  <p class="card-header">METADATA</p>
+                  <div class="card-body">
+                     <div class="row py-1" *ngFor="let field of MetaDataArray; let i = index">
+                        <div class="col-sm-4">
+                           {{field.label}}
+                        </div>
+                        <div class="col-sm-8">
+                           <input type="text" [(ngModel)]="field.value" name="{{field.value}}">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row py-1">
+            <div class="col-sm">
+               <div class="card">
+                  <p class="card-header">HTML</p>
+                  <div class="card-body" *ngIf="isEnabled == true">
+                     <div>
+                        &lt;fcid-form-control [field]="'{{selectedFieldControl.itemName}}'"
+                        [formGroupValue]="'testForm'" &gt;
+                        &lt;/fcid-form-control &gt;
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm">
+               <div class="card">
+                  <p class="card-header">JSON</p>
+                  <div>
+                     <textarea #textareaContent kendoTextArea
+                        style="width: 100%;min-height: 295px;background: #f7f7f7;"></textarea>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

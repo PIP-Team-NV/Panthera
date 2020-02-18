@@ -1,0 +1,1656 @@
+[
+   {
+      "metadataId": 21,
+      "itemName": "FirstName",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "First Name"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "First Name Help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-textbox"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "250px"
+               },
+               "maxLength": {
+                  "item1": 0,
+                  "item2": "4"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 22,
+      "itemName": "Age",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Age"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Age Help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-integer"
+               },
+               "min": {
+                  "item1": 0,
+                  "item2": "0"
+               },
+               "max": {
+                  "item1": 0,
+                  "item2": "10000"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "250px"
+               },
+               "step": {
+                  "item1": 0,
+                  "item2": "2"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "spinner": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "format": {
+                  "item1": 0,
+                  "item2": "n0"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 23,
+      "itemName": "Salary",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Salary"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Salary Help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "step": {
+                  "item1": 0,
+                  "item2": "1"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "250px"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "min": {
+                  "item1": 0,
+                  "item2": "0"
+               },
+               "max": {
+                  "item1": 0,
+                  "item2": "10"
+               },
+               "format": {
+                  "item1": 0,
+                  "item2": "n2"
+               },
+               "spinner": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-decimal"
+               },
+               "decimalValue": {
+                  "item1": 0,
+                  "item2": "5"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 24,
+      "itemName": "Hyperlink",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Hyperlink"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Hyperlink Help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-hyperlink"
+               },
+               "allowPopup": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "imageUrl": {
+                  "item1": 0,
+                  "item2": "../assets/images/globe.gif"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "250px"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "false"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 25,
+      "itemName": "URL",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Age"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Age Help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-url"
+               },
+               "url": {
+                  "item1": 0,
+                  "item2": "google.com"
+               },
+               "text": {
+                  "item1": 0,
+                  "item2": "Gmail"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 26,
+      "itemName": "MultiSelect",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "MultiSelect"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "MultiSelect Help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-multiselect"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "250px"
+               },
+               "maxNoSelection": {
+                  "item1": 0,
+                  "item2": "2"
+               },
+               "filterValue": {
+                  "item1": 0,
+                  "item2": "2"
+               },
+               "defaultText": {
+                  "item1": 0,
+                  "item2": "Select Country"
+               }
+            }
+         },
+         "List": {
+            "metadataParamValue": {
+               "137209": {
+                  "item1": 1,
+                  "item2": "India",
+                  "item3": false,
+                  "item4": null,
+                  "item5": []
+               },
+               "137210": {
+                  "item1": 2,
+                  "item2": "UK",
+                  "item3": false,
+                  "item4": null,
+                  "item5": []
+               },
+               "137211": {
+                  "item1": 3,
+                  "item2": "USA",
+                  "item3": false,
+                  "item4": null,
+                  "item5": []
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 27,
+      "itemName": "TextArea",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "TextArea"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Text area help text"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-textArea"
+               },
+               "maxLength": {
+                  "item1": 0,
+                  "item2": "300"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "rows": {
+                  "item1": 0,
+                  "item2": "10"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "250px"
+               },
+               "autoSize": {
+                  "item1": 0,
+                  "item2": "false"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 29,
+      "itemName": "TextEditor",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "TextEditor"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "TextEditor help text"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-textEditor"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "600px"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "colOneWidth": {
+                  "item1": 0,
+                  "item2": "90px"
+               },
+               "colThreeWidth": {
+                  "item1": 0,
+                  "item2": "185px"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 30,
+      "itemName": "SingleFileUpload",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "SingleFileUpload"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "SingleFileUpload field help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-single-file-upload"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "200"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "docType": {
+                  "item1": 0,
+                  "item2": ".jpg,.jpeg,.png"
+               },
+               "maxFileSize": {
+                  "item1": 0,
+                  "item2": "5000"
+               },
+               "selectButtonText": {
+                  "item1": 0,
+                  "item2": "Select"
+               },
+               "thumbnail": {
+                  "item1": 0,
+                  "item2": "Thumbnail"
+               },
+               "allowDeleteFiles": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "allowDeleteFileRoles": {
+                  "item1": 0,
+                  "item2": "Admin"
+               },
+               "deleteTooltip": {
+                  "item1": 0,
+                  "item2": "Handle Delete file"
+               },
+               "allowEditable": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "historyButtonText": {
+                  "item1": 0,
+                  "item2": "History"
+               },
+               "imgSrc": {
+                  "item1": 0,
+                  "item2": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+               },
+               "showhistoryGrid": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "minFileSize": {
+                  "item1": 0,
+                  "item2": "5"
+               },
+               "fileHeaderText": {
+                  "item1": 0,
+                  "item2": "File"
+               },
+               "descriptionHeaderText": {
+                  "item1": 0,
+                  "item2": "Description"
+               },
+               "dateHeaderText": {
+                  "item1": 0,
+                  "item2": "Date"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 31,
+      "itemName": "MultipleFileUpload",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "MultipleFileUpload"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "MultipleFileUpload help text"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-multiple-file-upload"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "200"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "maxFileSize": {
+                  "item1": 0,
+                  "item2": "5000"
+               },
+               "selectButtonText": {
+                  "item1": 0,
+                  "item2": "Select"
+               },
+               "allowDeleteFiles": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "deleteTooltip": {
+                  "item1": 0,
+                  "item2": "Handle Delete file"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "docType": {
+                  "item1": 0,
+                  "item2": ".jpg,.jpeg,.png"
+               },
+               "allowDeleteFileRoles": {
+                  "item1": 0,
+                  "item2": "Admin"
+               },
+               "allowEditable": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "historyButtonText": {
+                  "item1": 0,
+                  "item2": "History"
+               },
+               "updateText": {
+                  "item1": 0,
+                  "item2": "update"
+               },
+               "editText": {
+                  "item1": 0,
+                  "item2": "edit"
+               },
+               "deleteText": {
+                  "item1": 0,
+                  "item2": "delete"
+               },
+               "showhistoryGrid": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "minFileSize": {
+                  "item1": 0,
+                  "item2": "5"
+               },
+               "fileHeaderText": {
+                  "item1": 0,
+                  "item2": "File"
+               },
+               "descriptionHeaderText": {
+                  "item1": 0,
+                  "item2": "Description"
+               },
+               "dateHeaderText": {
+                  "item1": 0,
+                  "item2": "Date"
+               },
+               "colOneWidth": {
+                  "item1": 0,
+                  "item2": "100px"
+               },
+               "colTwoWidth": {
+                  "item1": 0,
+                  "item2": "100px"
+               },
+               "colThreeWidth": {
+                  "item1": 0,
+                  "item2": "175px"
+               },
+               "colFourWidth": {
+                  "item1": 0,
+                  "item2": "80px"
+               },
+               "colFiveWidth": {
+                  "item1": 0,
+                  "item2": "80px"
+               },
+               "gridHeight": {
+                  "item1": 0,
+                  "item2": "400"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 32,
+      "itemName": "Cascade",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Cascade"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Cascade"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-cascade"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "secChildText": {
+                  "item1": 0,
+                  "item2": "Order:"
+               },
+               "parentText": {
+                  "item1": 0,
+                  "item2": "Category:"
+               },
+               "childText": {
+                  "item1": 0,
+                  "item2": "Product:"
+               }
+            }
+         },
+         "List": {
+            "metadataParamValue": {
+               "137209": {
+                  "item1": 1,
+                  "item2": "Additives",
+                  "item3": true,
+                  "item4": 0,
+                  "item5": [
+                     {
+                        "item1": 4,
+                        "item2": "Water",
+                        "item3": true,
+                        "item4": 1,
+                        "item5": [
+                           {
+                              "item1": 5,
+                              "item2": "FightingWater",
+                              "item3": false,
+                              "item4": 4,
+                              "item5": []
+                           },
+                           {
+                              "item1": 6,
+                              "item2": "RockWater",
+                              "item3": false,
+                              "item4": 4,
+                              "item5": []
+                           }
+                        ]
+                     },
+                     {
+                        "item1": 7,
+                        "item2": "Arborio rice",
+                        "item3": false,
+                        "item4": 1,
+                        "item5": []
+                     }
+                  ]
+               },
+               "137210": {
+                  "item1": 2,
+                  "item2": "Black rice",
+                  "item3": true,
+                  "item4": 0,
+                  "item5": [
+                     {
+                        "item1": 8,
+                        "item2": "Oryza sativa",
+                        "item3": false,
+                        "item4": 2,
+                        "item5": []
+                     },
+                     {
+                        "item1": 9,
+                        "item2": "Chakhao Poireiton",
+                        "item3": true,
+                        "item4": 2,
+                        "item5": [
+                           {
+                              "item1": 10,
+                              "item2": "Grases",
+                              "item3": false,
+                              "item4": 9,
+                              "item5": []
+                           },
+                           {
+                              "item1": 11,
+                              "item2": "Oryaza",
+                              "item3": false,
+                              "item4": 9,
+                              "item5": []
+                           }
+                        ]
+                     }
+                  ]
+               },
+               "137211": {
+                  "item1": 3,
+                  "item2": "Basmati rice",
+                  "item3": false,
+                  "item4": 0,
+                  "item5": []
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 33,
+      "itemName": "CoreCascade",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "CoreCascade"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "CoreCascade"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-core-cascade"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "classCode": {
+                  "item1": 0,
+                  "item2": "IngrCat"
+               },
+               "parentClassNode": {
+                  "item1": 0,
+                  "item2": "IngrCat1,IngrCat2"
+               },
+               "otherCatColumn": {
+                  "item1": 0,
+                  "item2": "IngrCat"
+               },
+               "otherCatClassCode": {
+                  "item1": 0,
+                  "item2": "IngrCat"
+               },
+               "context": {
+                  "item1": 0,
+                  "item2": "INSProd,INSIngr"
+               },
+               "searchBtnText": {
+                  "item1": 0,
+                  "item2": "Search"
+               },
+               "browseBtnText": {
+                  "item1": 0,
+                  "item2": "Browse"
+               },
+               "loadMoreBtnText": {
+                  "item1": 0,
+                  "item2": "Load More..."
+               },
+               "loadMore": {
+                  "item1": 0,
+                  "item2": "Load More ..."
+               },
+               "selectQuetes": {
+                  "item1": 0,
+                  "item2": "Select one of the following..."
+               },
+               "dontSeeQuetes": {
+                  "item1": 0,
+                  "item2": "Dont see the classification you need here? Recommend one."
+               },
+               "selectBtnText": {
+                  "item1": 0,
+                  "item2": "Select"
+               },
+               "classificationText": {
+                  "item1": 0,
+                  "item2": "Classification Recommended."
+               },
+               "submit": {
+                  "item1": 0,
+                  "item2": "Submit"
+               },
+               "explanation": {
+                  "item1": 0,
+                  "item2": "Explanation"
+               },
+               "matchingText": {
+                  "item1": 0,
+                  "item2": "Matching Classification: (Click to select)"
+               },
+               "selectFollowText": {
+                  "item1": 0,
+                  "item2": "Select one of the following..."
+               },
+               "matchingBrowseText": {
+                  "item1": 0,
+                  "item2": "Matching Categories of Classification: (Click to browse category)"
+               },
+               "bottomText": {
+                  "item1": 0,
+                  "item2": "If you dont find the classification you need use the Browse tab to find the appropriate category and"
+               },
+               "leafClassNode": {
+                  "item1": 0,
+                  "item2": "IngrCat"
+               },
+               "findButtonText": {
+                  "item1": 0,
+                  "item2": "Find"
+               },
+               "breadCrumbDefaultText": {
+                  "item1": 0,
+                  "item2": "Categories"
+               }
+            }
+         },
+         "List": {
+            "metadataParamValue": {
+               "137209": {
+                  "item1": 1,
+                  "item2": "Additives",
+                  "item3": true,
+                  "item4": 0,
+                  "item5": [
+                     {
+                        "item1": 4,
+                        "item2": "Water",
+                        "item3": true,
+                        "item4": 1,
+                        "item5": [
+                           {
+                              "item1": 5,
+                              "item2": "FightingWater",
+                              "item3": false,
+                              "item4": 4,
+                              "item5": []
+                           },
+                           {
+                              "item1": 6,
+                              "item2": "RockWater",
+                              "item3": false,
+                              "item4": 4,
+                              "item5": []
+                           }
+                        ]
+                     },
+                     {
+                        "item1": 7,
+                        "item2": "Arborio rice",
+                        "item3": false,
+                        "item4": 1,
+                        "item5": []
+                     }
+                  ]
+               },
+               "137210": {
+                  "item1": 2,
+                  "item2": "Black rice",
+                  "item3": true,
+                  "item4": 0,
+                  "item5": [
+                     {
+                        "item1": 8,
+                        "item2": "Oryza sativa",
+                        "item3": false,
+                        "item4": 2,
+                        "item5": []
+                     },
+                     {
+                        "item1": 9,
+                        "item2": "Chakhao Poireiton",
+                        "item3": true,
+                        "item4": 2,
+                        "item5": [
+                           {
+                              "item1": 10,
+                              "item2": "Grases",
+                              "item3": false,
+                              "item4": 9,
+                              "item5": []
+                           },
+                           {
+                              "item1": 11,
+                              "item2": "Oryaza",
+                              "item3": false,
+                              "item4": 9,
+                              "item5": []
+                           }
+                        ]
+                     }
+                  ]
+               },
+               "137211": {
+                  "item1": 3,
+                  "item2": "Basmati rice",
+                  "item3": false,
+                  "item4": 0,
+                  "item5": []
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 34,
+      "itemName": "TextCombo",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "TextCombo"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "TextCombo Field Help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-textcombo"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "200px"
+               },
+               "defaultText": {
+                  "item1": 0,
+                  "item2": "Select Country"
+               }
+            }
+         },
+         "List": {
+            "metadataParamValue": {
+               "137209": {
+                  "item1": 2,
+                  "item2": "India",
+                  "item3": false,
+                  "item4": null,
+                  "item5": []
+               },
+               "137210": {
+                  "item1": 2,
+                  "item2": "Australia",
+                  "item3": false,
+                  "item4": null,
+                  "item5": []
+               },
+               "137211": {
+                  "item1": 2,
+                  "item2": "United States of America",
+                  "item3": false,
+                  "item4": null,
+                  "item5": []
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 35,
+      "itemName": "DropDown",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "DropDown"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "DropDown"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-dropdown"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "200px"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "defaultText": {
+                  "item1": 0,
+                  "item2": "Select Country"
+               }
+            }
+         },
+         "List": {
+            "metadataParamValue": {
+               "137209": {
+                  "item1": 2,
+                  "item2": "India",
+                  "item3": false,
+                  "item4": null,
+                  "item5": []
+               },
+               "137210": {
+                  "item1": 2,
+                  "item2": "Australia",
+                  "item3": false,
+                  "item4": null,
+                  "item5": []
+               },
+               "137211": {
+                  "item1": 2,
+                  "item2": "United States of America",
+                  "item3": false,
+                  "item4": null,
+                  "item5": []
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 36,
+      "itemName": "Password",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Password"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Password Field-help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-passwordInputbox"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "maxLength": {
+                  "item1": 0,
+                  "item2": "6"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "300px"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 37,
+      "itemName": "Checkbox",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Checkbox"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Checkbox field help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-checkbox"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "100px"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 38,
+      "itemName": "Boolean",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Boolean"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Boolean field help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-boolean"
+               },
+               "class1": {
+                  "item1": 0,
+                  "item2": "glyphicons glyphicons-ok"
+               },
+               "text0": {
+                  "item1": 0,
+                  "item2": "No"
+               },
+               "image0ToolTip": {
+                  "item1": 0,
+                  "item2": "Declined Invitation"
+               },
+               "image1ToolTip": {
+                  "item1": 0,
+                  "item2": "Accepted Invitation"
+               },
+               "image1": {
+                  "item1": 0,
+                  "item2": "../assets/images/check.png"
+               },
+               "image0": {
+                  "item1": 0,
+                  "item2": "../assets/images/cancel.png"
+               },
+               "text1": {
+                  "item1": 0,
+                  "item2": "Yes"
+               },
+               "class0": {
+                  "item1": 0,
+                  "item2": "glyphicons glyphicons-remove"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "250px"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 39,
+      "itemName": "DateTime",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "DateTime"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "DateTime field help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-date-time"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "250px"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "defaultDisplayCurrent": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "nullText": {
+                  "item1": 0,
+                  "item2": ""
+               },
+               "dateFormat": {
+                  "item1": 0,
+                  "item2": "dd-MMM-yyyy HH:mm:ss"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 99,
+      "itemName": "reminder",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Radio Button"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Radio Button field help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-radio-button"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "50px"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "false"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 40,
+      "itemName": "CoreImg",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "CoreImg"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "CoreImg"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-core-image"
+               },
+               "imageTooltipPrefix": {
+                  "item1": 0,
+                  "item2": "FCID"
+               },
+               "imageTooltipPostfix": {
+                  "item1": 0,
+                  "item2": "FCID1"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "100px"
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 62,
+      "itemName": "Flyout",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Flyout"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "Flyout"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-fly-out"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "300px"
+               },
+               "readonly": {
+                  "item1": 0,
+                  "item2": "false"
+               }
+            }
+         },
+         "List": {
+            "metadataParamValue": {
+               "137209": {
+                  "item1": "1",
+                  "item2": "Additives",
+                  "item3": true,
+                  "item4": null,
+                  "item5": [
+                     {
+                        "item1": "4",
+                        "item2": "Water",
+                        "item3": true,
+                        "item4": 1,
+                        "item5": [
+                           {
+                              "item1": "5",
+                              "item2": "FightingWater",
+                              "item3": false,
+                              "item4": 4,
+                              "item5": []
+                           },
+                           {
+                              "item1": "6",
+                              "item2": "RockWater",
+                              "item3": false,
+                              "item4": 4,
+                              "item5": []
+                           }
+                        ]
+                     },
+                     {
+                        "item1": "7",
+                        "item2": "Arborio rice",
+                        "item3": false,
+                        "item4": 1,
+                        "item5": []
+                     }
+                  ]
+               },
+               "137210": {
+                  "item1": "2",
+                  "item2": "Black rice",
+                  "item3": true,
+                  "item4": null,
+                  "item5": [
+                     {
+                        "item1": "8",
+                        "item2": "Oryza sativa",
+                        "item3": false,
+                        "item4": 2,
+                        "item5": []
+                     },
+                     {
+                        "item1": "9",
+                        "item2": "Chakhao Poireiton",
+                        "item3": true,
+                        "item4": 2,
+                        "item5": [
+                           {
+                              "item1": "10",
+                              "item2": "Grases",
+                              "item3": false,
+                              "item4": 9,
+                              "item5": []
+                           },
+                           {
+                              "item1": "11",
+                              "item2": "Oryaza",
+                              "item3": false,
+                              "item4": 9,
+                              "item5": []
+                           }
+                        ]
+                     }
+                  ]
+               },
+               "137211": {
+                  "item1": "3",
+                  "item2": "Basmati rice",
+                  "item3": false,
+                  "item4": null,
+                  "item5": []
+               }
+            }
+         }
+      }
+   },
+   {
+      "metadataId": 63,
+      "itemName": "TradingName",
+      "itemType": "Field",
+      "options": {
+         "UIHint": {
+            "metadataParamValue": {}
+         }
+      }
+   },
+   {
+      "metadataId": 243,
+      "itemName": "password",
+      "itemType": "Field",
+      "options": {
+         "DisplayName": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "password"
+               },
+               "ListCoreItem1": {
+                  "item1": 0,
+                  "item2": "retype-password"
+               }
+            }
+         },
+         "FieldHelp": {
+            "metadataParamValue": {
+               "ListCoreItem": {
+                  "item1": 0,
+                  "item2": "password Field Help"
+               },
+               "ListCoreItem1": {
+                  "item1": 0,
+                  "item2": "retype password field Help"
+               }
+            }
+         },
+         "UIHint": {
+            "metadataParamValue": {
+               "ControlType": {
+                  "item1": 0,
+                  "item2": "fcid-passwordInputbox"
+               },
+               "required": {
+                  "item1": 0,
+                  "item2": "true"
+               },
+               "maxlength": {
+                  "item1": 0,
+                  "item2": "6"
+               },
+               "width": {
+                  "item1": 0,
+                  "item2": "500px"
+               }
+            }
+         }
+      }
+   }
+]

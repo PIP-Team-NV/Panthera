@@ -1,0 +1,14 @@
+<ng-container *fcidVisible="'admin'">
+  <div class="alert alert-success">
+    <strong>Success!</strong> You are logged in as an Admin User!
+  </div>
+</ng-container>
+<ng-container *fcidVisible="'basicClient'">
+  <div class="alert alert-danger">
+    <strong>Ok!</strong> You are logged in as a basicClient User!
+  </div>
+</ng-container>
+<ng-container *fcidVisible="'loggedInUser'">This shows up if you are logged in!</ng-container>
+<ng-container *fcidVisible="'FlexFields'"><div>You have flex fields!</div>
+  <div *fcidVisible="'Eval4'">This div is inside the FlexFields container so you will only see if it you have that perm, but it also requires "Eval4" perm.</div>
+</ng-container>

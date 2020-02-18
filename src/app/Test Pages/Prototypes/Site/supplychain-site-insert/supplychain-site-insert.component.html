@@ -1,0 +1,93 @@
+<form class="popup-formatting k-centered" [formGroup]="siteInsertForm" fcidMetadataBinding [domain]="'supplychain.site'" [context]="'site.insert'" [serviceUrl]="serviceURL" [apiVersion]="'api/v1/'" [isTest]='false'>
+  <div class="row col-md-12">
+    <div class="col-md-3 no-padding">
+      <fcid-form-label-control fcidFormLabelBinding  [field]="'locationTypeSet'" [for]="'locationTypeSet'"></fcid-form-label-control>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="k-form-field col-md-7 no-padding">
+      <fcid-form-multiselect-control fcidFormMultiselectBinding [field]="'locationTypeSet'" formControlName="locationTypeSet"></fcid-form-multiselect-control>
+    </div>
+    <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-3 no-padding">
+      <fcid-form-label-control fcidFormLabelBinding  [field]="'siteName'" [for]="'siteName'"></fcid-form-label-control>
+    </div>
+    <div class="col-md-1"></div>
+    <input kendoTextBox class="col-md-7" id="siteName" type="text" formControlName="siteName" >
+    <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-3 no-padding">
+      <fcid-form-label-control fcidFormLabelBinding  [field]="'phone'" [for]="'phone'"></fcid-form-label-control>
+    </div>
+    <div class="col-md-1"></div>
+    <input kendoTextBox class="col-md-7" id="phone" type="text" formControlName="phone" >
+    <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-3 no-padding">
+      <fcid-form-label-control fcidFormLabelBinding  [field]="'address1'" [for]="'address1'"></fcid-form-label-control>
+    </div>
+    <div class="col-md-1"></div>
+    <input kendoTextBox class="col-md-7" id="address1" type="text" formControlName="address1" >
+    <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-3 no-padding">
+      <fcid-form-label-control fcidFormLabelBinding  [field]="'address2'" [for]="'address2'"></fcid-form-label-control>
+    </div>
+    <div class="col-md-1"></div>
+    <input kendoTextBox class="col-md-7" id="address2" type="text" formControlName="address2">
+    <div class="col-md-1"></div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-3 no-padding">
+      <fcid-form-label-control fcidFormLabelBinding  [field]="'city'" [for]="'city'"></fcid-form-label-control>
+    </div>
+    <div class="col-md-1"></div>
+    <input kendoTextBox class="col-md-7" id="city" type="text" formControlName="city" >
+    <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-3 no-padding">
+      <fcid-form-label-control fcidFormLabelBinding  [field]="'state'" [for]="'state'"></fcid-form-label-control>
+    </div>
+    <div class="col-md-1"></div>
+    <input kendoTextBox class="col-md-7" id="state" type="text" formControlName="state" >
+    <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-3 no-padding">
+      <fcid-form-label-control fcidFormLabelBinding  [field]="'country'" [for]="'country'"></fcid-form-label-control>
+    </div>
+    <div class="col-md-1"></div>
+    <kendo-dropdownlist
+                class="col-md-7 no-padding"
+                name="country"
+                [data]="countries"
+                [textField]="'text'"
+                [valueField]="'value'"
+                [valuePrimitive]="true"
+                formControlName="country"
+                >
+            </kendo-dropdownlist>
+    <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-3 no-padding">
+      <fcid-form-label-control fcidFormLabelBinding  [field]="'postalCode'" [for]="'postalCode'"></fcid-form-label-control>
+    </div>
+    <div class="col-md-1"></div>
+    <input kendoTextBox class="col-md-7" id="postalCode" type="text" formControlName="postalCode" >
+    <div class="col-md-1 required-end"><span class="k-required">*</span></div>
+  </div>
+  <div class="row col-md-12">
+    <button kendoButton class="btn-sm col-md-3" id="saveAndCon" type="button" [disabled]="!siteInsertForm.valid" (click)="onSave('saveAndCon')" >
+      <fcid-form-label-control fcidFormLabelBinding  [field]="'saveAndCon'" [onlyText]="true"></fcid-form-label-control>
+    </button>
+     <button kendoButton class="btn-sm col-md-3" id="saveAndClose" type="button" [disabled]="!siteInsertForm.valid" (click)="onSave('saveAndClose')" ><fcid-form-label-control fcidFormLabelBinding [field]="'saveAndClose'" [onlyText]="true"></fcid-form-label-control></button>
+     <button kendoButton class="btn-sm col-md-4" id="saveAndAdd" type="button" [disabled]="!siteInsertForm.valid" (click)="onSave('saveAndAdd')" ><fcid-form-label-control fcidFormLabelBinding [field]="'saveAndAdd'" [onlyText]="true"></fcid-form-label-control></button>
+     <button kendoButton class="btn-sm col-md-1" id="cancel" type="button" (click)="onClose()" kendoWindowCloseeAction><fcid-form-label-control fcidFormLabelBinding [field]="'cancel'" [onlyText]="true"></fcid-form-label-control></button>
+  </div>
+</form>

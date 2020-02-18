@@ -1,0 +1,13 @@
+<div [formGroup]="formGroupValue">
+  <div *ngIf="defaultEnabled == true">
+    <kendo-autocomplete #autocomplete [data]="listitemsArr" [filterable]="true" (filterChange)="handleFilter($event)"
+      [placeholder]="placeholder" formControlName="{{field}}" [readonly]="isReadonly" [style.width]="width">
+    </kendo-autocomplete>
+  </div>
+  <div *ngIf="isRequiredEnabled == true">
+    <kendo-autocomplete #autocomplete [data]="listitemsArr" [filterable]="true" (filterChange)="handleFilter($event)"
+      [placeholder]="placeholder" formControlName="{{field}}" [readonly]="isReadonly" [style.width]="width" required>
+    </kendo-autocomplete>
+    &nbsp;<span class="red">*</span>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<ng-template #defaultLabelTemplate>
+  <span>
+    <label>{{labelName}}</label><br><br>
+  </span>
+</ng-template>
+
+<ng-template #defaultFieldHelpTemplate>
+  <span>
+    <i *ngIf="showFieldHelp" class="fa fa-question-circle fcid-link-color-green fieldHelp col-md-2" [title]="helpText">
+    </i>
+  </span>
+</ng-template>
+
+<ng-template #defaultControlTemplate>
+  <div [formGroup]="formGroupValue">
+    <input kendoTextBox type="text" formControlName="{{field}}" />
+  </div>
+</ng-template>
+
+
+<!-- to render the templates  -->
+<div class="row col-md-12 controlSpacing">
+  <div class="col-md-3 ">
+    <ng-container *ngTemplateOutlet="defaultLabelTemplate">
+    </ng-container>
+  </div>
+
+  <div clss="col-md-2 no-padding ">
+    <ng-container *ngTemplateOutlet="fieldHelpTemplate ? fieldHelpTemplate : defaultFieldHelpTemplate">
+    </ng-container>
+  </div>
+
+  <div class="col-md-6 relative">
+    <ng-container #vc>
+    </ng-container>
+  </div>
+</div>

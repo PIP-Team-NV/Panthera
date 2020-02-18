@@ -1,0 +1,21 @@
+.popup-formatting {
+    margin-left: 30px;
+    height: 200px;
+    width: 500px;
+}
+.popup-label {
+    text-align: right;
+    margin-top: 6px;
+}
+
+.popup-formatting .row{
+    margin-bottom: 5px;
+}
+.popup-formatting .row button {
+    margin-top: 10px;
+    margin-left:20px;
+}
+.popup-formatting .row button:not(:first-child) {
+    margin-left:5px;
+}
+

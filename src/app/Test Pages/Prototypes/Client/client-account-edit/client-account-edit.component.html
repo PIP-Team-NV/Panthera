@@ -1,0 +1,329 @@
+<div class="container-fluid">
+  <div class="row" *fcidVisible="'admin'">
+    <div class="col-md-12" style="padding:0.5em 2em;">
+      <h1>Client {{clientId}}: {{clientName}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" fcidContextMenuBinding [clientId]="clientId" *fcidVisible="'admin'">
+      <fcid-menu></fcid-menu>
+    </div>
+  </div>
+</div>
+<div kendoWindowContainer></div>
+<!-- fcidMetadataBinding -->
+<form [formGroup]="clientEditForm" class="form-formatting" fcidMockMetaDataBinding fcidChangeLogTipBinding
+  [clientId]="filteredClientId" [domain]="'client.account'" [context]="'account.edit'" [serviceUrl]="serviceURL"
+  [apiVersion]="'api/v1/'" [isTest]='true' formGroupProvider [formGroupValue]="clientEditForm">
+
+
+  <!-- <fcid-form-control [field]="'password'" [fieldData]="'passwordRetype'">
+  </fcid-form-control> -->
+
+  <fcid-form-control [field]="'Flyout'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'FirstName'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Age'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Salary'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Hyperlink'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'URL'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'MultiSelect'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'TextArea'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'TextEditor'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'SingleFileUpload'" [gridDisplayData]="singleProducts">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'MultipleFileUpload'" [gridDisplayData]="multipleProducts"
+    [gridHistoryData]="multipleProducts">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Cascade'" [fieldData]="'subcategory'" [fieldvalue]="'description'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'CoreCascade'" [fieldData]="'Ingr'" [fieldDataValue]="fieldDataValue"
+    [itemsSearch]="itemsSearch">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'TextCombo'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'DropDown'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'CoreImg'" [imgdata]="imgObj">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Boolean'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'DateTime'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'reminder'">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Checkbox'">
+  </fcid-form-control>
+
+
+
+
+
+
+  <!--<fcid-change-log-date-range></fcid-change-log-date-range>-->
+  <!-- <div class="row col-md-12">
+    <div class="col-md-6">
+      <h3>
+        Company Profile
+      </h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+
+      <fcid-form-control [field]="'id'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'dateAdded'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'name'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'legalName'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'website'">
+      </fcid-form-control>
+    </div>
+    <div class="col-md-6">
+
+      <fcid-form-control [field]="'bTest'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'bPublic'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'locationId'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'primaryContactId'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'Logo'">
+      </fcid-form-control>
+    </div>
+  </div>
+  <div class="row col-md-12">
+    <div class="col-md-6">
+      <h3>
+        Company Function
+      </h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+
+      <fcid-form-control [field]="'bSup'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'bMfr'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'bDst'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'bRet'">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'primaryRole'">
+      </fcid-form-control>
+
+    </div>
+  </div> -->
+
+
+  <!-- <div class="row col-md-12">
+    <div class="col-md-6">
+      <h3>
+        Company Profile
+      </h3>
+
+      <fcid-form-control [field]="'client_ID'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'created'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'tradingName'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'legalName'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'website'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <div>
+        <h3>
+          <div class="row col-md-12 controlSpacing"></div>
+          Company Functions
+        </h3>
+
+        <fcid-form-control [field]="'supplying'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'copacking'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'distributing'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'retailing'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'primaryFunction'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+      </div>
+
+      <div>
+        <h3>
+          <div class="row col-md-12 controlSpacing"></div>
+          Billing Information
+        </h3>
+
+        <fcid-form-control [field]="'billingContact'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'billingSite'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'VATNumber'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+      </div>
+      <h6>
+        <div class="row col-md-12 controlSpacing"></div>
+        Payment Fields
+      </h6>
+      
+        <fcid-form-control [field]="'paymentType'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'paymentTerms'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'paymentCycle'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'preferredPaymentOption'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'reminder'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'creditCardMax'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'paymentStatus'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+    
+    </div>
+
+    <div class="col-md-6">
+
+      <fcid-form-control [field]="'testClient'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'testClient'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'isPublic'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'primaryContact'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+      <h3>Membership</h3>
+
+      <fcid-form-control [field]="'status'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'preferredTimeZone'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'preferredDateFormat'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <div class="row col-md-12 controlSpacing"></div>
+      <h3>Marketing & Client Services</h3>
+
+      <fcid-form-control [field]="'receiveFCEUMarketingOffers'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <fcid-form-control [field]="'receivePartnerMarketing'" [formGroupValue]="clientEditForm">
+      </fcid-form-control>
+
+      <h6>
+        <div class="row col-md-12 controlSpacing"></div>
+        Discount Fields
+      </h6>
+      <div class="row col-md-12 controlSpacing">
+        <fcid-form-control [field]="'discount'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'discountStartDate'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+
+        <fcid-form-control [field]="'discountEndDate'" [formGroupValue]="clientEditForm">
+        </fcid-form-control>
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-md-12">
+
+  </div> -->
+
+
+  <div class="row col-md-12 controlSpacing">
+    <div class="col-md-6">
+      <div class="col-md-7 offset-md-3">
+        <button kendoButton id="update" type="button" class="saveButton"
+          [disabled]="!clientEditForm.valid || !hasChanged" (click)="onUpdate()">
+          {{savingText}}
+        </button>
+        <button kendoButton id="cancel" type="button" class="undoButton" (click)="onCancel()" [disabled]="!hasChanged">
+          Undo
+          Changes
+        </button>
+
+      </div>
+    </div>
+  </div>
+</form>
+<!-- <hr/> -->
+<div class="row col-md-12">
+  <!-- <div class="col-md-10 offset-md-1"> -->
+  <fcid-supplychain-site-show [showHeader]="false" [gridDomain]="'client.account'" [onShow]="false">
+  </fcid-supplychain-site-show>
+  <!-- </div> -->
+</div>

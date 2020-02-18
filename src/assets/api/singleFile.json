@@ -1,0 +1,40 @@
+{
+	"singleProducts":[
+        {
+            "Name": "Apple.png",
+            "Description": "Apples are a sweet fleshy fruit that grow around the world.",
+            "Date": "25-04-2019"
+        }
+    ],
+    "multipleProducts":[
+        {
+          "Name": "Apple.png",
+          "Description": "Apples are a sweet fleshy fruit that grow around the world.",
+          "Date": "20-04-2019"
+        },
+        {
+          "Name": "Apricot.png",
+          "Description": "Sharing some resemblances to a peach, apricots are a small fleshy fruit that contain a hard stone (technically a seed) in the middle.",
+          "Date": "21-04-2019"
+        },
+        {
+          "Name": "Avocado.png",
+          "Description": "Avocados are an interesting fruit because they are very low in carbohydrate yet high in healthy fats",
+          "Date": "22-04-2019"
+        },
+        {
+          "Name": "Banana.png",
+          "Description": "The banana is a tropical fruit with a long body covered in a yellow skin.",
+          "Date": "23-04-2019"
+        },
+        {
+          "Name": "Blackberries.png",
+          "Description": "They are a small edible fruit with a big taste, and botanically they are a kind of berry that grow on brambles.",
+          "Date": "24-04-2019"
+        },
+        {
+          "Name": "Blackcurrant.png",
+          "Description": "Blackcurrants are a simple and common fruit found in Europe.",
+          "Date": "25-04-2019"
+        }]
+}

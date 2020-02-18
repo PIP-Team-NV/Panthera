@@ -1,0 +1,109 @@
+<div class="row" [formGroup]="formGroupValue">
+  <div class="col-md-4">
+    <button kendoButton (click)="openPopup()" style="width: 100%;">
+      {{findButtonText}}
+    </button>
+  </div>
+  &nbsp;<span *ngIf="required" class="red">*</span>
+  <div class="col-md-3">
+    <input class="inputWidth" kendoTextBox formControlName="{{field}}" readonly />
+  </div>
+  <div *ngIf="isAllow">
+    <span #anchor class="anchor content"></span>
+    <kendo-popup class="popupStyle" [offset]="offset">
+      <div class="headerDiv">
+        <label class="labelText">Select Classification</label>
+        <!-- <button kendoButton class="btnClose" (click)="cancleEvent()"></button> -->
+        <input type="image" class="btnClose" src="../assets/images/cancleImage.png" (click)="cancleEvent()">
+      </div>
+      <div>
+        <div class="k-header-tab">
+          <kendo-tabstrip (tabSelect)="onTabSelect($event)" #tabstrip>
+            <kendo-tabstrip-tab [title]="'Browse'" [selected]="true">
+              <ng-template kendoTabContent="true">
+                <div class="breadcrumb">
+                  <div *ngFor="let item of breadCrumbArr">
+                    <a [routerLink]="" (click)="breadcrumbLinkClick(item)">{{item?.item2}}</a>
+                  </div>
+                </div>
+                <div class="quetesSelect">
+                  <br>
+                  <span>{{selectQuetes}}</span>
+                  <div *ngFor="let item of categoryArr" (click)="browseSelectEvent(item)">{{item.item2}}</div>
+                  <br>
+                </div>
+                <button *ngIf="isEnabledBrosweLoadMore" class="load-more" kendoButton (click)="loadMore()">
+                  {{load_More}}
+                </button>
+                <div *ngIf="isSelectedLeafNode">
+                  <button kendoButton (click)="selectedBrowseVal()">
+                    {{selectbtntext}}
+                  </button>
+                </div>
+                <div *ngIf="leafNode">
+                  <div><span>{{dontSeeQuetes}}</span></div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <span>{{classificationText}}</span>
+                    </div>
+                    <div class="col-md-3">
+                      <input kendoTextBox />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <span>{{explanation}}</span>
+                    </div>
+                    <div class="col-md-3">
+                      <input kendoTextBox />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                      <button kendoButton class="submitBrowse">
+                        {{submit}}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </kendo-tabstrip-tab>
+            <kendo-tabstrip-tab [title]="'Search'">
+              <ng-template kendoTabContent="true">
+                <input class="inputOfSearch" kendoTextBox formControlName="{{fieldData}}"
+                  (ngModelChange)="changeText($event)" />
+                <br>
+                <span>{{matchingText}}</span>
+                <div class="quetesSelect">
+                  <span>{{selectFollowtext}}</span>
+                  <div *ngFor="let item of searchTabArr | search:'item1,item2':serachtext"
+                    (click)="selectSearchEvent(item)">
+                    {{item?.item2}}
+                  </div>
+                </div>
+                <div>
+                  <button class="load-more" *ngIf="isEnabledSearchLoadMore" kendoButton>{{loadMorebtnText}}</button>
+                  <div *ngIf="isSelectLeafNodeSearch">
+                    <button kendoButton (click)="selectedSearchVal()">{{selectbtntext}}</button>
+                  </div>
+                  <br>
+                  <br>
+                  <p><b>{{matchingBrowsText}}</b></p>
+                  <br>
+                  <div class="listview_wrapper">
+                    <ul class="k-widget" (click)="searchTextNavigate(selectedSerachText)">
+                      <li>{{selectedSerachText?.item2}}</li>
+                    </ul>
+                  </div>
+                  <p>{{bottomText}}</p>
+                </div>
+              </ng-template>
+            </kendo-tabstrip-tab>
+          </kendo-tabstrip>
+        </div>
+      </div>
+    </kendo-popup>
+  </div>
+</div>

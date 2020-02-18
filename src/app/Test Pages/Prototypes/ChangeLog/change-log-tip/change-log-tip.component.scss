@@ -1,0 +1,47 @@
+.changeLogDiv:hover {    
+    border: 1px solid rgba(33, 37, 41, 0.125);
+    border-radius: 5px;
+    cursor: pointer;   
+}
+
+.changeLogDiv {
+    border: 1px solid rgba(33, 37, 41, 0);
+    background-color: rgba(147, 195, 223, 0.25);
+    border-radius: 5px;
+    min-width: 100%;
+    min-height: 100%;
+    padding-top: 6px;
+    padding-left: 5px;
+}
+
+
+.changeLogDiv span.epsilonSpan {
+    display: inline-block;
+    margin-left:2px;
+    padding-left:1px;
+    padding-right:2px;
+    border-radius: 11px;
+    overflow-y:hidden;
+}
+
+.changeLogDiv span.userSpan {
+    display: inline-block;
+    margin-left:2px;
+    font-weight: bold;
+    padding-left:1px;
+    padding-right:2px;
+    border-radius: 11px;
+    width: 22px;    
+    height: 22px;
+    min-width: 22px;    
+    overflow: hidden;
+    
+}
+
+.changeLogDiv span img {
+    width: 25px;
+    margin-left: -20%;
+    margin-bottom: 35%;
+    height: auto;
+    overflow: hidden;
+}

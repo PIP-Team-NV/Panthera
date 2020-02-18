@@ -1,0 +1,201 @@
+<div class="row col-md-12" style="margin:10px 0 10px 0;">
+  <button style="margin-right:10px;" [disabled]="clientOpened" kendoButton (click)="openClientInsertWindow()"
+    *fcidVisible="'admin'">
+    Add Client
+  </button>
+</div>
+<kendo-grid id="clientsGrid" fcidMetadataBinding appClientsBinding [domain]="'client.account'"
+  [context]="'account.manage'" [serviceUrl]="serviceURL" [apiVersion]="'api/v1/'" [isTest]='false' [sortable]="{
+    mode: 'multiple'
+    }" [pageSize]="10" [skip]="0" [pageable]="true" [filterable]="true" [filter]="filter">
+
+  <kendo-grid-column field="id" fcidColumnBinding filter='numeric'>
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'id'"></fcid-column-header-control>
+    </ng-template>
+    <ng-template kendoGridFilterCellTemplate let-filter let-column="column">
+      <kendo-grid-numeric-filter-cell [column]="column" [spinners]="false" decimals="0" [format]="'##'"
+        [showOperators]="false" [filter]="filter">
+      </kendo-grid-numeric-filter-cell>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <a [routerLink]="['/accounts/edit', dataItem.id]">{{dataItem.id}}</a>
+    </ng-template>
+    <!-- This is for GridColumnFooter demonstration only we don't have any usecase for this yet but we could make a component for this
+      <ng-template kendoGridFooterTemplate  Index="columnIndex">
+      this is footer for ClientID
+    </ng-template>   -->
+  </kendo-grid-column>
+  <kendo-grid-column field="bPublic" fcidColumnBinding filter="boolean" *fcidVisible="'admin'">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'bPublic'"></fcid-column-header-control>
+    </ng-template>
+    <ng-template kendoGridFilterCellTemplate let-filter>
+      <fcid-switch-filter-control fcidSwitchFilterBinding [field]="'bPublic'" [filter]="filter">
+      </fcid-switch-filter-control>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <fcid-image-field-control fcidImageFieldBinding [field]="'bPublic'" [value]="dataItem.bPublic">
+      </fcid-image-field-control>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="name" fcidColumnBinding filter="text">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'name'"></fcid-column-header-control>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="bRet" fcidColumnBinding filter="boolean">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'bRet'"></fcid-column-header-control>
+    </ng-template>
+    <ng-template kendoGridFilterCellTemplate let-filter>
+      <fcid-checkbox-filter-control [field]="'bRet'" [filter]="filter"></fcid-checkbox-filter-control>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <fcid-icon-field-control fcidIconFieldBinding [field]="'bRet'" [value]="dataItem.bRet"></fcid-icon-field-control>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="bMfr" fcidColumnBinding filter="boolean">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'bMfr'"></fcid-column-header-control>
+    </ng-template>
+    <ng-template kendoGridFilterCellTemplate let-filter>
+      <fcid-switch-filter-control fcidSwitchFilterBinding [field]="'bMfr'" [filter]="filter">
+      </fcid-switch-filter-control>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <fcid-icon-field-control fcidIconFieldBinding [field]="'bMfr'" [value]="dataItem.bMfr"></fcid-icon-field-control>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="bSup" fcidColumnBinding filter="boolean">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'bSup'"></fcid-column-header-control>
+    </ng-template>
+    <ng-template kendoGridFilterCellTemplate let-filter>
+      <fcid-switch-filter-control fcidSwitchFilterBinding [field]="'bSup'" [filter]="filter">
+      </fcid-switch-filter-control>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <fcid-icon-field-control fcidIconFieldBinding [field]="'bSup'" [value]="dataItem.bSup"></fcid-icon-field-control>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="bDst" fcidColumnBinding filter="boolean">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'bDst'"></fcid-column-header-control>
+    </ng-template>
+    <ng-template kendoGridFilterCellTemplate let-filter>
+      <fcid-switch-filter-control fcidSwitchFilterBinding [field]="'bDst'" [filter]="filter">
+      </fcid-switch-filter-control>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <fcid-icon-field-control fcidIconFieldBinding [field]="'bDst'" [value]="dataItem.bDst"></fcid-icon-field-control>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="clientStatusId" filter="numeric">
+    <ng-template kendoGridHeaderTemplate>
+      <fcid-column-header-control fcidColumnHeaderBinding [field]="'clientStatusId'"></fcid-column-header-control>
+    </ng-template>
+    <ng-template kendoGridFilterCellTemplate let-filter>
+      <fcid-dropdown-filter-control fcidDropdownFilterBinding [field]="'clientStatusId'" [filter]="filter">
+      </fcid-dropdown-filter-control>
+    </ng-template>
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <fcid-foreignkey-field-control fcidForeignkeyFieldBinding [field]="'clientStatusId'"
+        [value]="dataItem['clientStatusId']"></fcid-foreignkey-field-control>
+    </ng-template>
+  </kendo-grid-column>
+  <!-- <kendo-grid-column field="id">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <a [routerLink]="['/changeLogs', dataItem.id]">Change Log</a>
+    </ng-template>
+  </kendo-grid-column> -->
+</kendo-grid>
+
+<div kendoWindowContainer></div>
+
+
+<!--For demo purpose we have added below code-->
+<!--<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12" style="margin:10px 0 10px 0;">
+        <button style="margin-right:10px;" [disabled]="clientOpened" kendoButton (click)="openClientInsertWindow()"
+                *fcidVisible="'admin'">
+          Add Client
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <form [formGroup]="clientEditForm" class="form-formatting" fcidMetadataBinding fcidChangeLogTipBinding [clientId]="filteredClientId"
+        [domain]="'client.account'" [context]="'account.edit'" [serviceUrl]="serviceURL" [apiVersion]="'api/v1/'" [isTest]='false'>
+
+   <fcid-form-control [field]="'password'" [fieldData]="'passwordRetype'" [formGroupValue]="clientEditForm">
+  </fcid-form-control> 
+
+    <fcid-form-control [field]="'Flyout'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'FirstName'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Age'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Salary'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Hyperlink'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'URL'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'MultiSelect'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'TextArea'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'TextEditor'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'SingleFileUpload'" [gridDisplayData]="singleProducts" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'MultipleFileUpload'" [gridDisplayData]="multipleProducts"
+    [gridHistoryData]="multipleProducts" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Cascade'" [fieldData]="'subcategory'" [fieldvalue]="'description'"
+    [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'CoreCascade'" [fieldData]="'Ingr'" [fieldDataValue]="fieldDataValue"
+    [itemsSearch]="itemsSearch" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'TextCombo'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'DropDown'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'CoreImg'" [imgdata]="imgObj" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Boolean'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'DateTime'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'reminder'" [formGroupValue]="clientEditForm">
+  </fcid-form-control>
+
+  <fcid-form-control [field]="'Checkbox'" [formGroupValue]="clientEditForm">
+  </fcid-form-control> 
+
+
+  </form>
+
+  <div kendoWindowContainer></div>-->

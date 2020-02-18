@@ -1,0 +1,14 @@
+<kendo-grid id="changeLogList" [data]="changes">
+  <kendo-grid-column field="date" width="160px">
+  </kendo-grid-column>
+  <kendo-grid-column field="user" width="140px">
+  </kendo-grid-column>
+  <kendo-grid-column field="action" width="120px">
+  </kendo-grid-column>
+  <kendo-grid-column field="oldValue">
+  </kendo-grid-column>
+  <kendo-grid-column field="newValue">
+  </kendo-grid-column>
+</kendo-grid>
+
+<button kendoButton id="close" type="button" (click)="onClose()">Close</button>

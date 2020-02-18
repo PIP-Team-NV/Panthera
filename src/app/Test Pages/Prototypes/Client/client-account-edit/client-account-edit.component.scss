@@ -1,0 +1,49 @@
+.no-padding{
+    padding:0 !important;
+}
+
+.required {
+    text-align: right;
+}
+
+.required span {
+    color: red;
+    font-size: x-large;
+    margin: 0 0 0 33px;
+}
+
+.required-end {
+    text-align: left;
+}
+
+.required-end span {
+    color: red;
+    font-size: x-large;
+    margin: 0 0 0 -13px;
+}
+
+.controlSpacing{
+    margin-top: 10px;
+}
+
+.saveButton{
+    margin: 10px 60px 0 0;
+    width: 100px;
+}
+
+.undoButton{
+    margin: 10px 60px 0 0;
+    width: 120px;
+}
+
+.deleteButton{
+    margin: 10px 0 0 0;
+    width: 100px;
+
+}
+
+.fieldHelp{
+
+    font-size: large;
+    margin: 12px 0 0 0;
+}

@@ -1,0 +1,294 @@
+{
+    "defaultBredCrumbObj" : [{
+        "item1": 0,
+        "item2": "Category",
+        "item3": true,
+        "item4": null,
+        "item5": "IngrCat",
+        "item6": []
+    }],
+
+    "dataCategory": [
+        {
+            "name": "Additives",
+            "parentId": 111,
+            "Id": 21,
+            "hasChildItems": true,
+            "classCode": "IngrCat1"
+        },
+        {
+            "name": "Water",
+            "parentId": 111,
+            "Id": 23,
+            "hasChildItems": false,
+            "classCode": "IngrCat"
+        },
+        {
+            "name": "Arborio rice",
+            "parentId": 111,
+            "Id": 24,
+            "hasChildItems": false,
+            "classCode": "IngrCat"
+        },
+        {
+            "name": "Black rice",
+            "parentId": 111,
+            "Id": 25,
+            "hasChildItems": false,
+            "classCode": "IngrCat"
+        },
+        {
+            "name": "basmati rice",
+            "parentId": 111,
+            "Id": 26,
+            "hasChildItems": false,
+            "classCode": "IngrCat"
+        },
+        {
+            "name": "brown rice",
+            "parentId": 111,
+            "Id": 27,
+            "hasChildItems": false,
+            "classCode": "IngrCat"
+        },
+        {
+            "name": "jasmine rice",
+            "parentId": 111,
+            "Id": 28,
+            "hasChildItems": false,
+            "classCode": "IngrCat"
+        },
+        {
+            "name": "instant rice",
+            "parentId": 111,
+            "Id": 29,
+            "hasChildItems": false,
+            "classCode": "IngrCat"
+        },
+        {
+            "name": "rice",
+            "parentId": 111,
+            "Id": 30,
+            "hasChildItems": false,
+            "classCode": "IngrCat"
+        }
+    ],
+    "loadDataCategory": [
+        {
+            "item2": "Animal Product",
+            "item4": 111,
+            "item1": 31,
+            "item3": false,
+            "item5": []
+        },
+        {
+            "item2": "Processing aid",
+            "item4": 111,
+            "item1": 32,
+            "item3": false,
+            "item5": "IngrCat"
+        },
+        {
+            "item2": "Enzyme",
+            "item4": 111,
+            "item1": 33,
+            "item3": false,
+            "item5": "IngrCat"
+        },
+        {
+            "item2": "Fats and oil",
+            "item4": 111,
+            "item1": 34,
+            "item3": false,
+            "item5": "IngrCat"
+        },
+        {
+            "item2": "Eggs products",
+            "item4": 111,
+            "item1": 35,
+            "item3": false,
+            "item5": "IngrCat"
+        }
+    ],
+    "dataProducts": [
+        {
+            "name": "Cake",
+            "parentId": 21,
+            "Id": 37,
+            "hasChildItems": true,
+            "classCode": "IngrCat2"
+        },
+        {
+            "name": "Meal",
+            "parentId": 21,
+            "Id": 38,
+            "hasChildItems": false,
+            "classCode": "IngrCat"
+        }
+    ],
+    "dataOrders": [
+        {
+            "name": "BreadCake",
+            "parentId": 37,
+            "Id": 39,
+            "hasChildItems": false,
+            "classCode": "IngrCat"
+        },
+        {
+            "name": "CheesCake",
+            "parentId": 37,
+            "Id": 40,
+            "hasChildItems": false,
+            "classCode": "IngrCat"
+        }
+    ],
+    "items": [
+        {
+            "text": "My Documents",
+            "items": [
+                {
+                    "text": "Search..."
+                },
+                {
+                    "text": "Kendo UI Project",
+                    "items": [
+                        {
+                            "text": "Search..."
+                        },
+                        {
+                            "text": "about.html"
+                        },
+                        {
+                            "text": "index.html"
+                        },
+                        {
+                            "text": "logo.png"
+                        }
+                    ]
+                },
+                {
+                    "text": "New Web Site",
+                    "items": [
+                        {
+                            "text": "Search..."
+                        },
+                        {
+                            "text": "mockup.jpg"
+                        },
+                        {
+                            "text": "Research.pdf"
+                        }
+                    ]
+                },
+                {
+                    "text": "Reports",
+                    "items": [
+                        {
+                            "text": "Search..."
+                        },
+                        {
+                            "text": "February.pdf"
+                        },
+                        {
+                            "text": "March.pdf"
+                        },
+                        {
+                            "text": "April.pdf"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "itemsSearch": [
+        {
+            "item2": "FightingWater",
+            "item4": 4,
+            "item1": 5,
+            "item3": false,
+            "item5": "Ingr",
+            "item6": []
+        },
+        {
+            "item2": "RockWater",
+            "item4": 4,
+            "item1": 6,
+            "item3": false,
+            "item5": "Ingr",
+            "item6": []
+        },
+        {
+            "item2": "Oryza sativa",
+            "item4": 2,
+            "item1": 8,
+            "item3": false,
+            "item5": "Ingr",
+            "item6": []
+        }
+    ],
+    "flyoutData": [
+        {
+            "id": 1,
+            "name": "Additives",
+            "hasChildItems": true,
+            "children": [
+                {
+                    "id": 4,
+                    "name": "Water",
+                    "hasChildItems": true,
+                    "children": [
+                        {
+                            "id": 5,
+                            "name": "FightingWater",
+                            "hasChildItems": false
+                        },
+                        {
+                            "id": 6,
+                            "name": "RockWater",
+                            "hasChildItems": false
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Arborio rice",
+                    "hasChildItems": false
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Black rice",
+            "hasChildItems": true,
+            "children": [
+                {
+                    "id": 8,
+                    "name": "Oryza sativa",
+                    "hasChildItems": false
+                },
+                {
+                    "id": 9,
+                    "name": "Chakhao Poireiton",
+                    "hasChildItems": true,
+                    "children": [
+                        {
+                            "id": 10,
+                            "name": "Grases",
+                            "hasChildItems": false
+                        },
+                        {
+                            "id": 11,
+                            "name": "Oryaza",
+                            "hasChildItems": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Basmati rice",
+            "hasChildItems": false
+        }
+    ]
+}

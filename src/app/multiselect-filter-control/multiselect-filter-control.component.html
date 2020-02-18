@@ -1,0 +1,17 @@
+
+<kendo-multiselect 
+style="width:220px"
+[data]="listCoreItems" 
+[textField]="'coreItemValue'"
+[valueField]="'coreItemId'"
+(valueChange)="onChange($event)">
+</kendo-multiselect>
+<!-- <button 
+  class="k-button k-button-icon k-clear-button-visible" 
+  style="float:right;" 
+  (click)="onClearFilter()">
+  <span class="k-icon k-i-filter-clear"></span>
+  //[value]="selectedItem()"
+  [valuePrimitive]="'true'"
+
+</button> -->

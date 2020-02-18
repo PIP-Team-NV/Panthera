@@ -1,0 +1,69 @@
+[
+    {
+        "routeId": 1,
+        "apiId": 1,
+        "fieldCode": "firstName",
+        "metaType": "PageForm",
+        "metas": [
+            {
+                "metaId": 198,
+                "ftCode": "fcid-textbox",
+                "label": "First Name",
+                "toolTip": "firstname",
+                "descr": "TextBoxDescr",
+                "MetaParms": [
+                    {
+                        "required": "true",
+                        "maxlength": "10",
+                        "readonly": "false",
+                        "width": "150px"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "routeId":1,
+        "apiId":1,
+        "fieldCode":"country",
+        "metaType":"PageForm",
+        "metas":[
+           {
+              "metaId":198,
+              "ftCode":"fcid-dropdown",
+              "label":"DropDownLabel",
+              "toolTip":"DropDownLabelTooltip",
+              "descr":"DropDownLabelDescr",
+              "MetaParms":[
+                 {
+                    "required":"true",
+                    "maxlength":"10",
+                    "readonly":"false",
+                    "width":"150px",
+                    "defaultText":"Select Country"
+                 }
+              ],
+              "List":[
+                 {
+                    "Id":1,
+                    "DisplayName":"India",
+                    "Visible":false,
+                    "Default":null
+                 },
+                 {
+                    "Id":2,
+                    "DisplayName":"Australia",
+                    "Visible":false,
+                    "Default":null
+                 },
+                 {
+                    "Id":3,
+                    "DisplayName":"United States of America",
+                    "Visible":false,
+                    "Default":null
+                 }
+              ]
+           }
+        ]
+     }
+]

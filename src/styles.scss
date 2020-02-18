@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+@import "scss/variables";
+@import "~@progress/kendo-theme-bootstrap/scss/all";
+@import "~bootstrap/scss/bootstrap";
+
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.fcid-color-green {
+  color: #3D777E;
+}
+
+.fcid-link-color-green {
+ color: #3D777E;
+}
+
+.fcid-link-color-green:hover {
+  color: #82B3BA;
+}
+
+.fcid-background-color-green {
+  background-color: #3D777E;
+}
+
+.fcid-background-color-lightgreen {
+  background-color: #82B3BA;
+}
+
+.checkbox label:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.checkbox .cr {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #a9a9a9;
+  border-radius: .25em;
+  width: 1.3em;
+  height: 1.3em;
+  float: left;
+  margin-right: .5em;
+}
+
+.checkbox .cr .cr-icon {
+  position: absolute;
+  font-size: .8em;
+  line-height: 0;
+  top: 50%;
+  left: 15%;
+}
+
+.checkbox label input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox label input[type="checkbox"]+.cr>.cr-icon {
+  opacity: 0;
+}
+
+.checkbox label input[type="checkbox"]:checked+.cr>.cr-icon {
+  opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled+.cr {
+  opacity: .5;
+}
+
+.k-window.k-widget.k-window-wrapper {
+  border-color: #3D777E;
+}
+
+kendo-window-titlebar.k-window-titlebar.k-dialog-titlebar.k-header {
+  background-image: linear-gradient(#82B3BA, white) !important;
+}

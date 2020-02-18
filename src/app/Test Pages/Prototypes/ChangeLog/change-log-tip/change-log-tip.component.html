@@ -1,0 +1,9 @@
+<ng-container *ngIf="visible">
+  <div class="changeLogDiv" (click)="openChangeLogPopupListWindow()">
+    <span class="userSpan" *ngIf="totalChanges >=1" style="background-color:#3F681C;color:white"><img [src]="firstUser"></span>
+    <span class="userSpan" *ngIf="totalChanges >=2" style="background-color:#FB6542;color:white;"><img [src]="secondUser"></span>
+    <span class="userSpan"  *ngIf="totalChanges == 3" style="background-color:#275E97;color:white;"><img [src]="thirdUser"></span>
+    <span class="epsilonSpan" style="font-weight: bold;" *ngIf="totalChanges > 3">(...)</span>
+    <span class="epsilonSpan">{{totalChanges}}</span>
+  </div>
+</ng-container>
