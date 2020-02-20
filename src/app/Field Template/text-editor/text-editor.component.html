@@ -1,0 +1,22 @@
+<div [formGroup]="formGroupValue" class="inline-flex">
+  <kendo-editor formControlName="{{field}}" [style.width]="width">
+    <kendo-toolbar>
+      <kendo-toolbar-buttongroup>
+        <kendo-toolbar-button kendoEditorButton="bold"></kendo-toolbar-button>
+        <kendo-toolbar-button kendoEditorButton="italic"></kendo-toolbar-button>
+        <kendo-toolbar-button kendoEditorButton="underline"></kendo-toolbar-button>
+        <kendo-toolbar-button kendoEditorButton="strikethrough"></kendo-toolbar-button>
+      </kendo-toolbar-buttongroup>
+      <kendo-toolbar-dropdownlist kendoEditorFormat></kendo-toolbar-dropdownlist>
+
+      <kendo-toolbar-button kendoEditorDialog="createLink"></kendo-toolbar-button>
+      <kendo-toolbar-button kendoEditorButton="unlink"></kendo-toolbar-button>
+      <kendo-toolbar-button kendoEditorDialog="insertImage"></kendo-toolbar-button>
+
+    </kendo-toolbar>
+  </kendo-editor>
+  <!-- <kendo-editor formControlName="{{field}}" [style.width]="width"></kendo-editor>
+  -->
+
+  &nbsp;<span *ngIf="required" class="red">*</span>
+</div>

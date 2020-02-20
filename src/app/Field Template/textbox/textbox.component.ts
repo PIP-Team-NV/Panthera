@@ -43,12 +43,12 @@ export class TextboxComponent implements OnInit, ControlValueAccessor, ControlMe
   ngOnInit() {
     debugger;
     if (this.fieldMetadata != undefined) {
-      let readonly = (this.readOnly) ? this.readOnly : this.mockMetadataService.getFieldAttributeParam([this.fieldMetadata], this.field);
+      let readonly = (this.readOnly) ? this.readOnly : this.mockMetadataService.getFieldAttributeParamData([this.fieldMetadata], this.field,'readonly');
       this.readOnly = readonly === "true" ? true : false;
-      let textBoxWidth = this.mockMetadataService.getFieldAttributeParam([this.fieldMetadata], this.field)
+      let textBoxWidth = this.mockMetadataService.getFieldAttributeParamData([this.fieldMetadata], this.field,'width')
       this.width = textBoxWidth === "0px" || textBoxWidth === null || textBoxWidth === "0%" ? "" : textBoxWidth;
-      this.required = this.mockMetadataService.getFieldAttributeParam([this.fieldMetadata], this.field) == "true" ? true : false;
-      this.maxLength = parseInt((this.maxLength) ? this.maxLength : this.mockMetadataService.getFieldAttributeParam([this.fieldMetadata], this.field));
+      this.required = this.mockMetadataService.getFieldAttributeParamData([this.fieldMetadata], this.field,'required') == "true" ? true : false;
+      this.maxLength = parseInt((this.maxLength) ? this.maxLength : this.mockMetadataService.getFieldAttributeParamData([this.fieldMetadata], this.field,'maxLength'));
     }
 
     this.createForm();

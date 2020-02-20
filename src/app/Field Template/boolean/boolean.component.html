@@ -1,0 +1,17 @@
+<div [formGroup]="formGroupValue">
+  <!-- <label *ngIf="isLabelVisible">{{labelValue}}</label> -->
+  <input *ngIf="isLabelVisible" kendoTextBox formControlName="{{field}}" readonly />
+  <span *ngIf="isVisible" class={{spanValue}}></span>
+  <div class="img">
+      <img 
+        *ngIf="img0IsVisible"
+        src={{image0}} 
+        title="{{image0ToolTip}}"/>
+      <img 
+        *ngIf="img1IsVisible" 
+        src={{image1}} 
+        title="{{image1ToolTip}}"
+       />
+    </div>
+    &nbsp;<span *ngIf="required" class="red">*</span>
+</div>

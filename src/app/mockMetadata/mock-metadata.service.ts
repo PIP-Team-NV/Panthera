@@ -55,14 +55,14 @@ export class MockMetadataService extends BehaviorSubject<FcidMetaDataModel[]>{
 			this.subjectData$ = this.cache$.pipe(
 				map((res: object[]) => {
 					let result: FcidMetaDataModel[] = [];
-					let metaParameters : controlparamsModel[] = []
+					let metaParameters: controlparamsModel[] = []
 					res.forEach(element => {
 						let fcidmetada = <FcidMetaDataModel>{
 							routeId: element['routeId'],
-  							apiId: element['apiId'],
-  							fieldCode: element['fieldCode'],
-  							metaType: element['metaType'],
-  							metas: []
+							apiId: element['apiId'],
+							fieldCode: element['fieldCode'],
+							metaType: element['metaType'],
+							metas: []
 						};
 						for (let entry of element['metas']) {
 							let controlparamsData = <controlparamsModel>{
@@ -74,15 +74,16 @@ export class MockMetadataService extends BehaviorSubject<FcidMetaDataModel[]>{
 								MetaParms: [],
 								List: []
 							};
-							
-							for(let meta of entry['MetaParms']){
+
+							for (let meta of entry['MetaParms']) {
 								controlparamsData.MetaParms.push(meta);
 							}
-
-							for(let list of entry['List']){
-								controlparamsData.List.push(list);
+							
+							if (entry['List'] != undefined) {
+								for (let list of entry['List']) {
+									controlparamsData.List.push(list);
+								}
 							}
-
 							fcidmetada.metas.push(controlparamsData);
 						}
 						result.push(fcidmetada);
@@ -91,7 +92,7 @@ export class MockMetadataService extends BehaviorSubject<FcidMetaDataModel[]>{
 				}),
 				catchError(this.handleError)
 			)
-		} 
+		}
 		return this.subjectData$;
 	}
 
@@ -261,11 +262,12 @@ export class MockMetadataService extends BehaviorSubject<FcidMetaDataModel[]>{
 		return metadata ? metadata : null
 	}
 
-	public static getList(result: any) {
-		if (!result) return;
-		var option = result ? result.options.find(i => i.key === 'List') : null;
-		return option ? option.value : null;
-	}
+	// public static getList(result: any) {
+	// 	if (!result) return;
+	// 	var option = result ? result.options.find(i => i.key === 'List') : null;
+	// 	return option ? option.value : null;
+	// }
+
 	public getUIHint(result: FcidMetaDataModel[], filed: string): any {
 		debugger;
 		if (!result) return;
@@ -296,9 +298,24 @@ export class MockMetadataService extends BehaviorSubject<FcidMetaDataModel[]>{
 		var fieldAttribute = metadata ? metadata.metas.find(i => i.label === i.label) : null;
 		//var attributeParam = fieldAttribute ? fieldAttribute.value.find(p => p.key === param) : null
 		return fieldAttribute.label ? fieldAttribute.label : null
-
 	}
 
+	public getFieldAttributeParamData(result: FcidMetaDataModel[], field: string, param: string): any {
+		if (!result) return;
+		debugger;
+		var metadata = result.find(x => x.fieldCode === field);
+		var fieldAttribute = metadata ? metadata.metas[0].MetaParms[0] : null
+		var key = this.getKeyByValue(fieldAttribute, param);
+		return fieldAttribute[key] ? fieldAttribute[key] : null
+	}
+
+	getKeyByValue(object, value) { 
+		for (var prop in object) { 
+			if (prop == value) 
+				return prop; 
+		} 
+	}
+  
 	public getFieldAttributeLabel(result: FcidMetaDataModel[], field: string): any {
 		debugger;
 		if (!result) return;
@@ -317,11 +334,11 @@ export class MockMetadataService extends BehaviorSubject<FcidMetaDataModel[]>{
 		return fieldAttribute.toolTip ? fieldAttribute.toolTip : null
 	}
 
-	public getList(result: FcidMetadata[], filed: string) {
+	public static getList(result: any) {
+		debugger;
 		if (!result) return;
-		var metadata = result.find(x => x.itemName === filed)
-		var option = metadata ? metadata.options.find(i => i.key === 'List') : null;
-		return option ? option.value : null;
+		var listData = result.metas[0].List ? result.metas[0].List : null;
+		return listData;
 	}
 
 	private getDataSrc(domain: string, context: string, mockData: any[]) {
@@ -385,7 +402,7 @@ export interface controlparamsModel {
 	List?: listParms[]
 }
 
-export interface listParms{
+export interface listParms {
 	Id: number,
 	DisplayName: string,
 	Visible: boolean,

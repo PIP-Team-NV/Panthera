@@ -30,10 +30,10 @@
         "metas":[
            {
               "metaId":198,
-              "ftCode":"fcid-dropdown",
-              "label":"DropDownLabel",
-              "toolTip":"DropDownLabelTooltip",
-              "descr":"DropDownLabelDescr",
+              "ftCode":"fcid-multiselect",
+              "label":"Country",
+              "toolTip":"Country",
+              "descr":"Country",
               "MetaParms":[
                  {
                     "required":"true",
@@ -65,5 +65,397 @@
               ]
            }
         ]
-     }
+     },
+     {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"SingleFileUpload",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":204,
+            "ftCode":"fcid-single-file-upload",
+            "label":"SingleFileUpload",
+            "toolTip":"SingleFileUpload Tooltip",
+            "descr":"SingleFileUpload Description",
+            "MetaParms":[
+               {
+                  "width":"200",
+                  "required":"true",
+                  "docType":".jpg,.jpeg,.png",
+                  "maxFileSize":"5000",
+                  "selectButtonText":"Select",
+                  "thumbnail":"Thumbnail",
+                  "allowDeleteFiles":"true",
+                  "allowDeleteFileRoles":"Admin",
+                  "deleteTooltip":"Handle Delete file",
+                  "allowEditable":"true",
+                  "historyButtonText":"History",
+                  "imgSrc":"https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+                  "showhistoryGrid":"true",
+                  "minFileSize":"5",
+                  "fileHeaderText":"File",
+                  "descriptionHeaderText":"Description",
+                  "dateHeaderText":"Date"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"TextCombo",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":210,
+            "ftCode":"fcid-textcombo",
+            "label":"TextCombo",
+            "toolTip":"TextComboTooltip",
+            "descr":"TextComboDescr",
+            "MetaParms":[
+               {
+                  "readonly":"false",
+                  "required":"true",
+                  "width":"200px",
+                  "defaultText":"Select Country"
+               }
+            ],
+            "List":[
+               {
+                  "Id":1,
+                  "DisplayName":"India",
+                  "Visible":false,
+                  "Default":null
+               },
+               {
+                  "Id":2,
+                  "DisplayName":"Australia",
+                  "Visible":false,
+                  "Default":null
+               },
+               {
+                  "Id":3,
+                  "DisplayName":"United States of America",
+                  "Visible":false,
+                  "Default":null
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"TextEditor1",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":203,
+            "ftCode":"fcid-textEditor",
+            "label":"TextEditor",
+            "toolTip":"TextEditor Tooltip",
+            "descr":"TextEditor Description",
+            "MetaParms":[
+               {
+                  "required":"true",
+                  "colOneWidth":"90px",
+                  "colThreeWidth":"185px",
+                  "width":"250px"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"URL",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":202,
+            "ftCode":"fcid-url",
+            "label":"Url label",
+            "toolTip":"Url Tooltip",
+            "descr":"Url description",
+            "MetaParms":[
+               {
+                  "url":"google.com",
+                  "text":"Google"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"TextArea",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":203,
+            "ftCode":"fcid-textArea",
+            "label":"TextArea label",
+            "toolTip":"TextArea Tooltip",
+            "descr":"TextArea Description",
+            "MetaParms":[
+               {
+                  "required":"true",
+                  "maxlength":"100",
+                  "readonly":"false",
+                  "width":"250px",
+                  "rows":"10",
+                  "autoSize":"false"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"MultipleFileUpload",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":203,
+            "ftCode":"fcid-multiple-file-upload",
+            "label":"MultipleFileUpload label",
+            "toolTip":"MultipleFileUpload Tooltip",
+            "descr":"MultipleFileUpload Description",
+            "MetaParms":[
+               {
+                  "width":"200",
+                  "readonly":"false",
+                  "maxFileSize":"5000",
+                  "selectButtonText":"Select",
+                  "allowDeleteFiles":"true",
+                  "deleteTooltip":"Handle Delete file",
+                  "required":"true",
+                  "docType":".jpg,.jpeg,.png",
+                  "allowDeleteFileRoles":"Admin",
+                  "allowEditable":"true",
+                  "historyButtonText":"History",
+                  "updateText":"update",
+                  "editText":"edit",
+                  "deleteText":"delete",
+                  "showhistoryGrid":"true",
+                  "minFileSize":"5",
+                  "fileHeaderText":"File",
+                  "descriptionHeaderText":"Description",
+                  "dateHeaderText":"Date",
+                  "colOneWidth":"100px",
+                  "colTwoWidth":"100px",
+                  "colThreeWidth":"175px",
+                  "colFourWidth":"80px",
+                  "colFiveWidth":"80px",
+                  "gridHeight":"400"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"Integer",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":199,
+            "ftCode":"fcid-integer",
+            "label":"Integer label",
+            "toolTip":"Integer Tooltip",
+            "descr":"Integer description",
+            "MetaParms":[
+               {
+                  "required":"true",
+                  "readonly":"false",
+                  "width":"150px",
+                  "min":"0",
+                  "max":"100",
+                  "step":"2",
+                  "spinner":"true",
+                  "format":"n0"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"Decimal",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":200,
+            "ftCode":"fcid-decimal",
+            "label":"Decimal label",
+            "toolTip":"Decimal Tooltip",
+            "descr":"Decimal description",
+            "MetaParms":[
+               {
+                  "required":"true",
+                  "readonly":"false",
+                  "width":"150px",
+                  "min":"0",
+                  "max":"100",
+                  "step":"1",
+                  "spinner":"true",
+                  "format":"n2",
+                  "decimalValue":"5"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"Boolean",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":209,
+            "ftCode":"fcid-boolean",
+            "label":"Boolean Name",
+            "toolTip":"Boolean toolTip",
+            "descr":"Boolean description",
+            "MetaParms":[
+               {
+                  "class1":"glyphicons glyphicons-ok",
+                  "text0":"No",
+                  "image0ToolTip":"Declined Invitation",
+                  "image1ToolTip":"Accepted Invitation",
+                  "image1":"../assets/images/check.png",
+                  "image0":"../assets/images/cancel.png",
+                  "text1":"Yes",
+                  "class0":"glyphicons glyphicons-remove",
+                  "width":"250px"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"Datetime",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":210,
+            "ftCode":"fcid-date-time",
+            "label":"Datetime Name",
+            "toolTip":"Datetime toolTip",
+            "descr":"Datetime description",
+            "MetaParms":[
+               {
+                  "width":"250px",
+                  "required":"true",
+                  "readonly":"false",
+                  "defaultDisplayCurrent":"true",
+                  "nullText":"",
+                  "dateFormat":"dd-MMM-yyyy HH:mm:ss"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"Hyperlink",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":201,
+            "ftCode":"fcid-hyperlink",
+            "label":"Hyperlink label",
+            "toolTip":"Hyperlink Tooltip",
+            "descr":"Hyperlink description",
+            "MetaParms":[
+               {
+                  "required":"true",
+                  "readonly":"false",
+                  "width":"150px",
+                  "allowPopup":"false",
+                  "imageUrl":"../assets/images/globe.gif"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"Checkbox",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":208,
+            "ftCode":"fcid-checkbox",
+            "label":"Checkbox Name",
+            "toolTip":"Checkbox toolTip",
+            "descr":"Checkbox description",
+            "MetaParms":[
+               {
+                  "required":"true",
+                  "readonly":"false",
+                  "width":"150px"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"CoreImg",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":211,
+            "ftCode":"fcid-core-image",
+            "label":"CoreImg Name",
+            "toolTip":"CoreImg toolTip",
+            "descr":"CoreImg description",
+            "MetaParms":[
+               {
+                  "imageTooltipPrefix":"FCID",
+                  "imageTooltipPostfix":"FCID1",
+                  "width":"100px"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "routeId":1,
+      "apiId":1,
+      "fieldCode":"Hyperlink",
+      "metaType":"PageForm",
+      "metas":[
+         {
+            "metaId":201,
+            "ftCode":"fcid-hyperlink",
+            "label":"Hyperlink label",
+            "toolTip":"Hyperlink Tooltip",
+            "descr":"Hyperlink description",
+            "MetaParms":[
+               {
+                  "required":"true",
+                  "readonly":"false",
+                  "width":"150px",
+                  "allowPopup":"false",
+                  "imageUrl":"../assets/images/globe.gif"
+               }
+            ]
+         }
+      ]
+   }
 ]

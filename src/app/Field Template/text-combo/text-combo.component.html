@@ -1,0 +1,7 @@
+<div [formGroup]="formGroupValue">
+  <kendo-combobox formControlName="{{field}}" [data]="data" [textField]="'DisplayName'"
+                  [valueField]="'Id'" [filterable]="true" (filterChange)="handleFilter($event)" [valuePrimitive]="true"
+                  [style.width]="width" [readonly]="readonly" [placeholder]="defaultText">
+  </kendo-combobox>
+  &nbsp;<span *ngIf="isRequiredEnabled" class="red">*</span>
+</div>

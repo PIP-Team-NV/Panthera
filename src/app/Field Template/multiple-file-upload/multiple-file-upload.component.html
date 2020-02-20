@@ -1,0 +1,68 @@
+<div [formGroup]="formGroupValue">
+  <div>
+    <div class="row">
+      <div class="col-md-11">
+        <kendo-grid [data]="multipleProducts" [height]="gridHeight" [pageSize]="gridState.take" [skip]="gridState.skip"
+                    [sort]="gridState.sort" [pageable]="true" [sortable]="false" (dataStateChange)="onStateChange($event)"
+                    (edit)="editHandler($event)" (cancel)="cancelHandler($event)" (save)="saveHandler($event)"
+                    (remove)="removeHandler($event)" [navigable]="true">
+          <kendo-grid-column field="Name" title="FILE" [editable]="false" [width]="colOneWidth">
+            <ng-template kendoGridCellTemplate let-dataItem>
+              <a href="">{{dataItem.Name}}</a>
+            </ng-template>
+          </kendo-grid-column>
+          <kendo-grid-column field="Description" editor="string" title="DESCRIPTION" [width]="colTwoWidth"></kendo-grid-column>
+          <kendo-grid-command-column title="" [width]="colThreeWidth">
+            <ng-template kendoGridCellTemplate let-isNew="isNew">
+              <button kendoGridEditCommand [primary]="true">{{edit}}</button>
+              <button kendoGridSaveCommand>{{update}}</button>
+              <button kendoGridCancelCommand>Cancel</button>
+            </ng-template>
+          </kendo-grid-command-column>
+          <kendo-grid-column field="Date" editor="string" title="DATE" [editable]="false" [width]="colFourWidth">
+          </kendo-grid-column>
+          <kendo-grid-command-column title="" [width]="colFiveWidth">
+            <ng-template kendoGridCellTemplate let-isNew="isNew">
+              <a href="" kendoGridRemoveCommand [title]="deleteTooltip">{{delete}}</a>
+            </ng-template>
+          </kendo-grid-command-column>
+        </kendo-grid>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    </div>
+
+    <div>
+      <div class="row">
+        <div class="col-md-11">
+          <kendo-upload [saveUrl]="uploadSaveUrl" [removeUrl]="uploadRemoveUrl" [restrictions]="restriction"
+                        formControlName="{{field}}">
+          </kendo-upload>
+        </div>
+        <div class="col-md-1">
+          &nbsp;<span *ngIf="required" class="red">*</span>
+        </div>
+      </div>
+
+      <button *ngIf="showHistoryBtn" kendoButton (click)="openShowHistory()">
+        {{historyBtnText}}
+      </button>
+    </div>
+    <div *ngIf="showGrid">
+      <div class="row">
+        <div class="col-md-11">
+          <kendo-grid [data]="multipleProducts" [height]="height" [pageSize]="gridState.take" [skip]="gridState.skip"
+                      [sort]="gridState.sort" [pageable]="true" [sortable]="false" (dataStateChange)="onStateChange($event)">
+            <kendo-grid-column field="Name" title="FILE" [editable]="false">
+              <ng-template kendoGridCellTemplate let-dataItem>
+                <a href="">{{dataItem.Name}}</a>
+              </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column field="Description" title="DESCRIPTION"></kendo-grid-column>
+            <kendo-grid-column field="Date" title="DATE"></kendo-grid-column>
+          </kendo-grid>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+  </div>

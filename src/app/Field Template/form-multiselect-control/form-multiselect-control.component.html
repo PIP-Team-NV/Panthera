@@ -1,0 +1,10 @@
+
+<kendo-multiselect 
+[data]="listCoreItems" 
+[textField]="'coreItemValue'"
+[valueField]="'coreItemId'"
+(valueChange)="onChange($event)" 
+[value]="selectedItem()"
+[valuePrimitive]="'true'"
+>
+</kendo-multiselect>

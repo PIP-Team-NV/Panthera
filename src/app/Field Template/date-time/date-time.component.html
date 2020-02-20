@@ -1,0 +1,8 @@
+<div [formGroup]="formGroupValue">
+  <div *ngIf="isVisible == false">
+    <label>{{nullText}}</label>
+  </div>
+  <div *ngIf="isVisible == true">
+    <kendo-datepicker [readonly]=readOnly [format]="dateFormat" formControlName="{{field}}"></kendo-datepicker>
+  </div>
+</div>

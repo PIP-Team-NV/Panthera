@@ -25,11 +25,8 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 //   FormLabelControlComponent, PageHelpControlComponent, DropdownFilterControlComponent, FormDropdownControlComponent, PageHelpBindingDirective, DropdownFilterBindingDirective
 //   , ColumnHeaderBindingDirective, IconFieldBindingDirective, ImageFieldBindingDirective, SwitchFilterBindingDirective, FormMultiselectBindingDirective, ForeignkeyFieldBindingDirective, MetadataLibModule
 // } from 'fcid-metadata-lib';
-
 import { ChangeLogComponent } from './Test Pages/Prototypes/ChangeLog/change-log/change-log.component';
 import { ChangeLogBindingDirective } from './Test Pages/Prototypes/ChangeLog/change-log-binding.directive';
-
-
 import { StartupService } from './../startup.service';
 import { DialogsModule } from '@progress/kendo-angular-dialog';
 import { ClientAccountInsertComponent } from './Test Pages/Prototypes/Client/client-account-insert/client-account-insert.component';
@@ -41,7 +38,6 @@ import { SupplychainSiteEditComponent } from './Test Pages/Prototypes/Site/suppl
 import { MainmenuBindingDirective } from './bindingDirectives/mainmenu-binding.directive';
 import { ContextMenuBindingDirective } from './bindingDirectives/context-menu-binding.directive';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
-
 import { SupplychainSiteManageComponent } from './Test Pages/Prototypes/Site/supplychain-site-manage/supplychain-site-manage.component';
 import { SupplychainSiteShowComponent } from './Test Pages/Prototypes/Site/supplychain-site-show/supplychain-site-show.component';
 import { SitesBindingDirective } from './Test Pages/Prototypes/Site/sites-binding.directive';
@@ -56,37 +52,19 @@ import { from } from 'rxjs';
 import { MultiselectFilterControlComponent } from './multiselect-filter-control/multiselect-filter-control.component';
 import { MultiValueCellComponent } from './multi-value-cell/multi-value-cell.component';
 import { FormControlComponent } from './form-control/form-control.component';
-//import { MultiselectComponent } from './multiselect/multiselect.component';
 import { SiteWithNewFieldTemplateComponent } from './Test Pages/Prototypes/Site/site-with-new-field-template/site-with-new-field-template.component';
 import { FcidFooterComponent } from './App Layout/fcid-footer/fcid-footer.component';
 import { FcidHeaderComponent } from './App Layout/fcid-header/fcid-header.component';
 import { AutoCompleteTextboxComponent } from './autoCompleteTextbox/autoCompleteTextbox.component';
-//import { TextboxComponent } from './textbox/textbox.component';
-//import { DecimalComponent } from './decimal/decimal.component';
-//import { IntegerComponent } from './integer/integer.component';
-//import { HyperlinkComponent } from './hyperlink/hyperlink.component';
 import { ListComponent } from './list/list.component';
 import { PopupModule } from '@progress/kendo-angular-popup';
-//import { TextAreaComponent } from './text-area/text-area.component';
 import { EditorModule } from '@progress/kendo-angular-editor';
-//import { UrlComponent } from './url/url.component';
-//import { TextEditorComponent } from './text-editor/text-editor.component';
 import { UploadModule } from '@progress/kendo-angular-upload';
-//import { TextComboComponent } from './text-combo/text-combo.component';
-//import { SingleFileUploadComponent } from './single-file-upload/single-file-upload.component';
 import { PasswordInputboxComponent } from './password-inputbox/password-inputbox.component';
 import { SearchPipe } from './core-cascade/search.pipe';
-//import { CascadeComponent } from './cascade/cascade.component';
 import { CompareValidatorDirective } from './compare-validator.directive';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { DropdownComponent } from './dropdown/dropdown.component';
-//import { MultipleFileUploadComponent } from './multiple-file-upload/multiple-file-upload.component';
-//import { CoreCascadeComponent } from './core-cascade/core-cascade.component';
-//import { CoreImageComponent } from './core-image/core-image.component';
-//import { DateTimeComponent } from './date-time/date-time.component';
-//import { BooleanComponent } from './boolean/boolean.component';
-//import { CheckboxComponent } from './checkbox/checkbox.component';
-//import { FlyOutComponent } from './fly-out/fly-out.component';
 import { FilterListPipe } from './filter-list.pipe';
 import { Level1FilterListPipe } from './level1-filter-list.pipe';
 import { Level2FilterListPipe } from './level2-filter-list.pipe';
@@ -94,21 +72,24 @@ import { AftervaluechangeDirective } from './aftervaluechange.directive';
 import { MockMetadaBindingDirective } from './mockMetadata/mock-metada-binding.directive';
 import { DashboardComponent } from './Test Pages/Prototypes/dashboard/dashboard.component';
 import { ReadonlyValidatorDirective } from './readonly-validator.directive';
-//import { MetadataLibModule } from 'metadata-lib-fcid';
-//import { FormGroupProviderService } from '../form-group-provider.service';
 import { FormGroupProviderDirective } from './form-group-provider.directive'
 import { MetadataLibModule } from './metaDataLibModule/metadata-lib.module';
 import { TestFieldtemplateComponent } from './Test Pages/Prototypes/test-fieldtemplate/test-fieldtemplate.component';
 import { TextboxComponent } from './Field Template/textbox/textbox.component';
-//import { RadioButtonComponent } from './radio-button/radio-button.component';
-//import { CoreCascadeComponent } from './core-cascade/core-cascade.component';
-//import { SingleFileUploadComponent } from 'metadata-lib-fcid/lib/Fcid Componenets/single-file-upload/single-file-upload.component';
-// import { MultipleFileUploadComponent } from './multiple-file-upload/multiple-file-upload.component';
-// import { SingleFileUploadComponent } from './single-file-upload/single-file-upload.component';
-// import { SearchPipe } from './core-cascade/search.pipe';
-
-
-
+import { MultiselectComponent } from './Field Template/multiselect/multiselect.component';
+import { SingleFileUploadComponent } from './Field Template/single-file-upload/single-file-upload.component';
+import { TextComboComponent } from './Field Template/text-combo/text-combo.component';
+import { TextEditorComponent } from './Field Template/text-editor/text-editor.component';
+import { UrlComponent } from './Field Template/url/url.component';
+import { TextAreaComponent } from './Field Template/text-area/text-area.component';
+import { MultipleFileUploadComponent } from './Field Template/multiple-file-upload/multiple-file-upload.component';
+import { BooleanComponent } from './Field Template/boolean/boolean.component';
+import { CheckboxComponent } from './Field Template/checkbox/checkbox.component';
+import { DateTimeComponent } from './Field Template/date-time/date-time.component';
+import { DecimalComponent } from './Field Template/decimal/decimal.component';
+import { IntegerComponent } from './Field Template/integer/integer.component';
+import { RadioButtonComponent } from './Field Template/radio-button/radio-button.component';
+import { HyperlinkComponent } from './Field Template/hyperlink/hyperlink.component';
 
 export function startupServiceFactory(startupService: StartupService): Function {
   return () => startupService.load();
@@ -124,79 +105,36 @@ export function startupServiceFactory(startupService: StartupService): Function 
     UserDebugInfoComponent,
     BadNavComponent,
     FcidVisibleDirective,
-    //ClientAccountManageComponent,
-    // CoreCascadeComponent,
-    // MultipleFileUploadComponent,
-    // SingleFileUploadComponent,
-    // ColumnBindingDirective,
-    // ColumnHeaderControlComponent,
-    // ForeignkeyFieldControlComponent,
-    // IconFieldControlComponent,
-    // ImageFieldControlComponent,
-    // CheckboxFilterControlComponent,
-    // SwitchFilterControlComponent,
     ChangeLogComponent,
     ChangeLogBindingDirective,
     ClientAccountInsertComponent,
-    //ClientAccountEditComponent,
-    //SupplychainSiteInsertComponent,
-    //SupplychainSiteEditComponent,
     MainmenuBindingDirective,
     ContextMenuBindingDirective,
-    //SupplychainSiteManageComponent,
-    //SupplychainSiteShowComponent,
     SitesBindingDirective,
     ChangeLogTipComponent,
     ChangeLogTipBindingDirective,
     SubcontextMenuBindingDirective,
     ChangeLogPopupListComponent,
     ChangeLogDateRangeComponent,
-    // FormDropdownControlComponent,
-    // FormMultiselectControlComponent,
-    // FormDatePickerControlComponent,
-    // FormDropdownBindingDirective,
-    // FormDatePickerBindingDirective,
-    // FormLabelControlComponent,
-    // FormLabelBindingDirective,
-    // PageHelpControlComponent,
-    // PageHelpBindingDirective,
-    // DropdownFilterControlComponent,
-    // DropdownFilterBindingDirective,
-    // ColumnHeaderBindingDirective,
-    // IconFieldBindingDirective,
-    // ImageFieldBindingDirective,
-    // SwitchFilterBindingDirective,
-    // FormMultiselectBindingDirective,
-    // ForeignkeyFieldBindingDirective,
     MultiselectFilterControlComponent,
     MultiValueCellComponent,
     FormControlComponent,
-    //MultiselectComponent,
-    //SiteWithNewFieldTemplateComponent,
+    MultiselectComponent,
+    SingleFileUploadComponent,
     FcidFooterComponent,
     FcidHeaderComponent,
     AutoCompleteTextboxComponent,
-    // DecimalComponent,
-    // IntegerComponent,
-    // HyperlinkComponent,
     ListComponent,
-    // TextAreaComponent,
-    // UrlComponent,
-    // TextEditorComponent,
-    // TextComboComponent,
-    // SingleFileUploadComponent,
+    TextAreaComponent,
     PasswordInputboxComponent,
     SearchPipe,
-    // CascadeComponent,
     CompareValidatorDirective,
     DropdownComponent,
-    // MultipleFileUploadComponent,
-    // CoreCascadeComponent,
-    // CoreImageComponent,
-    // DateTimeComponent,
-    // BooleanComponent,
-    // CheckboxComponent,
-    // FlyOutComponent,
+    TextComboComponent,
+    TextEditorComponent,
+    UrlComponent,
+    MultipleFileUploadComponent,
+    BooleanComponent,
     FilterListPipe,
     Level1FilterListPipe,
     Level2FilterListPipe,
@@ -206,10 +144,16 @@ export function startupServiceFactory(startupService: StartupService): Function 
     DashboardComponent,
     FormGroupProviderDirective,
     TextboxComponent,
+    CheckboxComponent,
+    DateTimeComponent,
+    DecimalComponent,
+    IntegerComponent,
+    RadioButtonComponent,
+    HyperlinkComponent,
     TestFieldtemplateComponent 
   ],
   // Register the component that will be created dynamically
-  entryComponents: [ ChangeLogPopupListComponent, AutoCompleteTextboxComponent, ListComponent, PasswordInputboxComponent, DropdownComponent,TextboxComponent],
+  entryComponents: [ ChangeLogPopupListComponent, AutoCompleteTextboxComponent,RadioButtonComponent,HyperlinkComponent,DecimalComponent,DateTimeComponent,IntegerComponent,CheckboxComponent,BooleanComponent,MultipleFileUploadComponent,UrlComponent,TextAreaComponent,TextEditorComponent,TextComboComponent,SingleFileUploadComponent,MultiselectComponent, ListComponent, PasswordInputboxComponent, DropdownComponent,TextboxComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

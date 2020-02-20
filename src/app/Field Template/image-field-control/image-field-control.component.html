@@ -1,0 +1,14 @@
+<div style="text-align: center">
+  <img 
+    *ngIf="Condition(image0,true)" 
+    src="{{image0}}" 
+    title="{{Image0ToolTip}}"
+    width="{{width}}" 
+    height="{{height}}" />
+  <img 
+    *ngIf="Condition(image1,false)" 
+    src="{{image1}}" 
+    title="{{Image1ToolTip}}"
+    width="{{width}}" 
+    height="{{height}}" />
+</div>

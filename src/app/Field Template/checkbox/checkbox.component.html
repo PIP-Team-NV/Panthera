@@ -1,0 +1,4 @@
+<div [formGroup]="formGroupValue">
+  <input type="checkbox" formControlName="{{field}}" [style.width]="width" [readonly]=readonly>
+  &nbsp;<span *ngIf="required" class="red">*</span>
+</div>

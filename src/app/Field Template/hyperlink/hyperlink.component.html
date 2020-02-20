@@ -1,0 +1,5 @@
+<div [formGroup]="formGroupValue">
+  <input kendoTextBox #link [readonly]=readOnly [style.width]="width" formControlName="{{field}}" />
+  <img src="{{imageUrl}}" class="urlImage" (click)="openPopup(link.value)" />
+  &nbsp;<span *ngIf="required" class="red">*</span>
+</div>

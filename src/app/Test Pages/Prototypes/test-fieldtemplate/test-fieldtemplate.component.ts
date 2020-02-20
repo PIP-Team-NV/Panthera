@@ -89,16 +89,22 @@ export class TestFieldtemplateComponent implements OnInit {
     firstName: new FormControl('', {
       validators: Validators.required
     }),
-    Age: new FormControl('', {
+    Integer: new FormControl('', {
       validators: Validators.required
     }),
-    Salary: new FormControl('', {
+    Decimal: new FormControl('', {
       validators: Validators.required
     }),
-    Hyperlink: new FormControl('', {
+    country: new FormControl('', {
       validators: Validators.required
     }),
-    URL: new FormControl('', {
+    SingleFileUpload: new FormControl('', {
+      validators: Validators.required
+    }),
+    TextCombo: new FormControl('', {
+      validators: Validators.required
+    }),
+    TextEditor1: new FormControl('', {
       validators: Validators.required
     }),
     MultiSelect: new FormControl('', {
@@ -107,19 +113,13 @@ export class TestFieldtemplateComponent implements OnInit {
     TextArea: new FormControl('', {
       validators: Validators.required
     }),
-    TextEditor: new FormControl('', {
-      validators: Validators.required
-    }),
-    SingleFileUpload: new FormControl('', {
+    Hyperlink: new FormControl('', {
       validators: Validators.required
     }),
     MultipleFileUpload: new FormControl('', {
       validators: Validators.required
     }),
     DropDown: new FormControl('', {
-      validators: Validators.required
-    }),
-    TextCombo: new FormControl('', {
       validators: Validators.required
     }),
     subcategory: new FormControl('', {
@@ -140,7 +140,7 @@ export class TestFieldtemplateComponent implements OnInit {
     CoreImg: new FormControl('', [Validators.required]),
     Checkbox: new FormControl(true, [Validators.required]),
     Boolean: new FormControl('true', [Validators.required]),
-    DateTime: new FormControl(new Date(2000, 10, 10)),
+    Datetime: new FormControl(new Date(2000, 10, 10)),
     Flyout: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
     passwordRetype: new FormControl('', [Validators.required]),

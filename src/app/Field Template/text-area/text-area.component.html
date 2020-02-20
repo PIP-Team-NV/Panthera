@@ -1,0 +1,6 @@
+<div [formGroup]="formGroupValue">
+  <textarea kendoTextArea formControlName="{{field}}" [maxlength]="textAreaLength" [readonly]=readonly
+            (input)="onSearchChange($event.target.value)" (ngModelChange)="pasteEvent($event)" [style.width]="width"
+            [autoSize]=autoSize [rows]=rows></textarea>
+  &nbsp;<span *ngIf="required" class="red">*</span>
+</div>

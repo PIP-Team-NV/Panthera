@@ -1,0 +1,7 @@
+<div [formGroup]="formGroupValue">
+  <kendo-numerictextbox [format]="'format'" [decimals]="decimal" [min]="min" [max]="max" [style.width]="width"
+                        [step]="step" [readonly]="readOnly" [spinners]="spinner" 
+                         formControlName="{{field}}">
+  </kendo-numerictextbox>
+  &nbsp;<span *ngIf="required" class="red">*</span>
+</div>
